@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | حسام مجراشي</title>
+<style>
+:root {
+    --bg-color: #f0f2f5;
+    --text-color: #333;
+    --header-bg: #24292e;
+    --header-text: #fff;
+    --card-bg: #fff;
+    --card-border: #ddd;
+}
+body.dark {
+    --bg-color: #121212;
+    --text-color: #eee;
+    --header-bg: #1b1b1b;
+    --header-text: #fff;
+    --card-bg: #1e1e1e;
+    --card-border: #333;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+header a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+header button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+h2 {
+    border-bottom: 2px solid var(--header-bg);
+    padding-bottom: 5px;
+}
+.project {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.project h3 {
+    margin: 0 0 10px 0;
+}
+.project p {
+    margin: 0 0 10px 0;
+}
+.project a {
+    color: #0366d6;
+    text-decoration: none;
+}
+.project a:hover {
+    text-decoration: underline;
+}
+.lang-switch {
+    float: right;
+}
+</style>
+</head>
+<body>
+<header>
+    <div>
+        <span id="site-title">حسام مجراشي</span>
+        <button id="toggle-theme">🌙 / ☀️</button>
+        <button id="toggle-lang" class="lang-switch">EN</button>
+    </div>
+    <p id="github-link">GitHub: <a href="https://github.com/HossamMajrashi" target="_blank">HossamMajrashi</a></p>
+</header>
+
+<div class="container">
+    <h2 id="projects-title">مشاريعي</h2>
+
+    <div class="project">
+        <h3 id="proj1-title">Pomodoro Timer</h3>
+        <p id="proj1-desc">تطبيق مؤقت Pomodoro لإدارة الوقت وزيادة الإنتاجية.</p>
+        <a href="https://github.com/HossamMajrashi/Pomodoro_Timer" target="_blank" id="proj1-link">رابط المشروع على GitHub</a>
+    </div>
+
+    <div class="project">
+        <h3 id="proj2-title">TypeShadow</h3>
+        <p id="proj2-desc">مشروع TypeShadow لتجربة تأثيرات الظلال على النصوص.</p>
+        <a href="https://github.com/HossamMajrashi/typeshadow" target="_blank" id="proj2-link">رابط المشروع على GitHub</a>
+    </div>
+
+    <div class="project">
+        <h3 id="proj3-title">TwoPartCutter</h3>
+        <p id="proj3-desc">أداة TwoPartCutter لتقسيم الملفات أو النصوص إلى جزئين.</p>
+        <a href="https://github.com/HossamMajrashi/TwoPartCutter" target="_blank" id="proj3-link">رابط المشروع على GitHub</a>
+    </div>
+</div>
+
+<script>
+// الوضع الليلي / النهاري
+const toggleThemeBtn = document.getElementById('toggle-theme');
+toggleThemeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+});
+
+// تبديل اللغة
+const toggleLangBtn = document.getElementById('toggle-lang');
+let lang = 'ar';
+toggleLangBtn.addEventListener('click', () => {
+    if(lang === 'ar'){
+        lang = 'en';
+        toggleLangBtn.textContent = 'AR';
+        document.getElementById('site-title').textContent = 'Hossam Majrashi';
+        document.getElementById('projects-title').textContent = 'My Projects';
+        document.getElementById('proj1-title').textContent = 'Pomodoro Timer';
+        document.getElementById('proj1-desc').textContent = 'Pomodoro Timer app for time management and productivity.';
+        document.getElementById('proj1-link').textContent = 'Project link on GitHub';
+        document.getElementById('proj2-title').textContent = 'TypeShadow';
+        document.getElementById('proj2-desc').textContent = 'TypeShadow project to experiment text shadow effects.';
+        document.getElementById('proj2-link').textContent = 'Project link on GitHub';
+        document.getElementById('proj3-title').textContent = 'TwoPartCutter';
+        document.getElementById('proj3-desc').textContent = 'TwoPartCutter tool to split files or text into two parts.';
+        document.getElementById('proj3-link').textContent = 'Project link on GitHub';
+        document.getElementById('github-link').innerHTML = 'GitHub: <a href="https://github.com/HossamMajrashi" target="_blank">HossamMajrashi</a>';
+    } else {
+        lang = 'ar';
+        toggleLangBtn.textContent = 'EN';
+        document.getElementById('site-title').textContent = 'حسام مجراشي';
+        document.getElementById('projects-title').textContent = 'مشاريعي';
+        document.getElementById('proj1-title').textContent = 'Pomodoro Timer';
+        document.getElementById('proj1-desc').textContent = 'تطبيق مؤقت Pomodoro لإدارة الوقت وزيادة الإنتاجية.';
+        document.getElementById('proj1-link').textContent = 'رابط المشروع على GitHub';
+        document.getElementById('proj2-title').textContent = 'TypeShadow';
+        document.getElementById('proj2-desc').textContent = 'مشروع TypeShadow لتجربة تأثيرات الظلال على النصوص.';
+        document.getElementById('proj2-link').textContent = 'رابط المشروع على GitHub';
+        document.getElementById('proj3-title').textContent = 'TwoPartCutter';
+        document.getElementById('proj3-desc').textContent = 'أداة TwoPartCutter لتقسيم الملفات أو النصوص إلى جزئين.';
+        document.getElementById('proj3-link').textContent = 'رابط المشروع على GitHub';
+        document.getElementById('github-link').innerHTML = 'GitHub: <a href="https://github.com/HossamMajrashi" target="_blank">HossamMajrashi</a>';
+    }
+});
+</script>
+</body>
+</html>
