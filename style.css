@@ -345,8 +345,9 @@ html[data-lang="ar"] .stat-card:hover{transform:translateX(-4px);}
 ════════════════════════════════════════ */
 .projects-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  grid-template-columns:1fr;
   gap:24px;
+  align-items:start;
 }
 .project-card{
   background:var(--c-surface);
@@ -358,6 +359,8 @@ html[data-lang="ar"] .stat-card:hover{transform:translateX(-4px);}
   overflow:hidden;
   display:flex;flex-direction:column;
   position:relative;
+
+  align-self:start;
 }
 .project-card:hover{
   transform:translateY(-8px);
@@ -408,9 +411,9 @@ html[data-lang="ar"] .stat-card:hover{transform:translateX(-4px);}
 .gh-btn:hover{background:var(--c-accent);color:#fff;border-color:var(--c-accent);}
 .gh-btn svg{flex-shrink:0;}
 
-.card-body{padding:0 28px 28px;flex:1;display:flex;flex-direction:column;}
+.card-body{padding:0 28px 28px;display:flex;flex-direction:column;}
 .proj-name{font-size:1.2rem;font-weight:800;margin-bottom:10px;letter-spacing:-.3px;}
-.proj-desc{color:var(--c-txt2);font-size:.9rem;line-height:1.7;flex:1;margin-bottom:20px;}
+.proj-desc{color:var(--c-txt2);font-size:.9rem;line-height:1.7;margin-bottom:20px;}
 .proj-tags{display:flex;flex-wrap:wrap;gap:6px;}
 .tag{
   font-size:.73rem;font-weight:600;
@@ -423,7 +426,7 @@ html[data-lang="ar"] .stat-card:hover{transform:translateX(-4px);}
 .proj-features{
   list-style:none;
   display:flex;flex-direction:column;gap:7px;
-  margin-bottom:4px;
+  margin-bottom:10px;
 }
 .proj-features li{
   display:flex;align-items:center;gap:8px;
