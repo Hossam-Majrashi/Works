@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حسام حسن مجرشي | Hossam Hassan Majrashi — IT Support & Flutter Developer</title>
+<meta name="description" content="السيرة الذاتية ومعرض أعمال حسام حسن مجرشي — دعم فني وأنظمة، مطور تطبيقات Flutter و Electron، وبناء رومات أندرويد مخصصة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0f1a; --bg2:#101728; --card:#141d33; --card2:#18223c;
+  --line:rgba(255,255,255,.08);
+  --txt:#eef2fb; --muted:#9aa7c2;
+  --acc:#4f8cff; --acc2:#22d3ee; --gold:#f5c451; --green:#34d399;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Cairo','Inter',sans-serif;
+  background:var(--bg); color:var(--txt);
+  line-height:1.8; overflow-x:hidden;
+}
+body::before{
+  content:""; position:fixed; inset:0; z-index:-1;
+  background:
+    radial-gradient(700px 400px at 85% -5%, rgba(79,140,255,.18), transparent 60%),
+    radial-gradient(600px 400px at 5% 20%, rgba(34,211,238,.12), transparent 60%),
+    radial-gradient(800px 500px at 50% 110%, rgba(245,196,81,.07), transparent 60%),
+    var(--bg);
+}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+section{padding:70px 0}
+h1,h2,h3{line-height:1.35}
+.en{font-family:'Inter',sans-serif}
+
+/* ===== Nav ===== */
+nav{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(14px);
+  background:rgba(11,15,26,.75);
+  border-bottom:1px solid var(--line);
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+nav .brand{font-weight:900;font-size:1.1rem}
+nav .brand span{color:var(--acc)}
+nav ul{display:flex;gap:22px;list-style:none}
+nav a{color:var(--muted);text-decoration:none;font-size:.95rem;transition:.2s}
+nav a:hover{color:var(--txt)}
+@media(max-width:760px){nav ul{display:none}}
+#langSel{
+  background:var(--card);color:var(--txt);border:1px solid var(--line);
+  border-radius:10px;padding:6px 10px;font-family:inherit;font-size:.85rem;
+  cursor:pointer;outline:none;
+}
+#langSel:hover{border-color:var(--acc)}
+html[dir="ltr"] body{font-family:'Inter','Cairo',sans-serif}
+
+/* ===== Hero ===== */
+.hero{padding:90px 0 60px;text-align:center}
+.badge{
+  display:inline-block;padding:6px 18px;border-radius:99px;font-size:.85rem;
+  background:rgba(79,140,255,.12);border:1px solid rgba(79,140,255,.35);color:var(--acc);
+  margin-bottom:22px;
+}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:900}
+.hero h1 .grad{
+  background:linear-gradient(90deg,var(--acc),var(--acc2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .role{font-size:clamp(1.05rem,2.4vw,1.4rem);color:var(--gold);font-weight:700;margin-top:10px}
+.hero p.lead{max-width:760px;margin:18px auto 0;color:var(--muted);font-size:1.05rem}
+.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+.btn{
+  padding:13px 30px;border-radius:14px;font-weight:700;text-decoration:none;
+  font-size:1rem;transition:.25s;display:inline-flex;align-items:center;gap:8px;
+}
+.btn-p{background:linear-gradient(135deg,var(--acc),#3b6fe0);color:#fff;box-shadow:0 8px 30px rgba(79,140,255,.35)}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(79,140,255,.45)}
+.btn-o{border:1px solid var(--line);color:var(--txt);background:var(--card)}
+.btn-o:hover{border-color:var(--acc);transform:translateY(-3px)}
+.stats{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:48px}
+.stat{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 30px;min-width:150px;
+}
+.stat b{display:block;font-size:1.7rem;color:var(--acc2)}
+.stat span{color:var(--muted);font-size:.9rem}
+
+/* ===== Sections ===== */
+.sec-title{text-align:center;margin-bottom:44px}
+.sec-title small{color:var(--acc);font-weight:700;letter-spacing:1px}
+.sec-title h2{font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:900;margin-top:6px}
+.sec-title p{color:var(--muted);max-width:640px;margin:10px auto 0}
+
+/* ===== Experience ===== */
+.exp-card{
+  background:linear-gradient(160deg,var(--card),var(--card2));
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:34px;position:relative;overflow:hidden;
+}
+.exp-card::before{
+  content:"";position:absolute;inset-inline-start:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(180deg,var(--acc),var(--acc2));
+}
+.exp-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px}
+.exp-head h3{font-size:1.35rem;font-weight:800}
+.exp-head .co{color:var(--acc2);font-weight:700}
+.period{
+  background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.4);color:var(--green);
+  padding:5px 16px;border-radius:99px;font-size:.85rem;font-weight:700;white-space:nowrap;
+}
+.exp-card ul{margin-top:18px;padding-inline-start:20px;color:var(--muted)}
+.exp-card ul li{margin-bottom:8px}
+.exp-card ul li::marker{color:var(--acc)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tag{
+  font-size:.78rem;padding:4px 13px;border-radius:99px;
+  background:rgba(79,140,255,.1);border:1px solid rgba(79,140,255,.25);color:#bcd3ff;
+}
+
+/* ===== Projects grid ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;transition:.3s;display:flex;flex-direction:column;gap:12px;
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(79,140,255,.5);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.card .top{display:flex;align-items:center;gap:14px}
+.card .icon{
+  width:52px;height:52px;border-radius:14px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:1.5rem;
+  background:linear-gradient(135deg,rgba(79,140,255,.2),rgba(34,211,238,.15));
+  border:1px solid var(--line);overflow:hidden;
+}
+.card .icon img{width:100%;height:100%;object-fit:cover}
+.rom .icon img{width:100%;height:100%;object-fit:cover}
+.card h3{font-size:1.15rem;font-weight:800}
+.card .sub{color:var(--acc2);font-size:.82rem;font-weight:600}
+.card p{color:var(--muted);font-size:.93rem;flex:1}
+.card .link{
+  color:var(--acc);text-decoration:none;font-size:.88rem;font-weight:700;
+  display:inline-flex;align-items:center;gap:6px;
+}
+.card .link:hover{color:var(--acc2)}
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:4px}
+.shots img{
+  width:100%;border-radius:10px;border:1px solid var(--line);cursor:pointer;
+  transition:.25s;aspect-ratio:16/10;object-fit:cover;
+}
+.shots img:hover{transform:scale(1.03);border-color:var(--acc)}
+
+/* ===== ROMs ===== */
+.rom{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;display:flex;flex-direction:column;gap:12px;transition:.3s;
+}
+.rom:hover{transform:translateY(-6px);border-color:rgba(79,140,255,.5);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.rom .top{display:flex;align-items:center;gap:14px}
+.rom .icon{
+  width:52px;height:52px;border-radius:14px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:1.5rem;
+  background:linear-gradient(135deg,rgba(79,140,255,.2),rgba(34,211,238,.15));
+  border:1px solid var(--line);overflow:hidden;
+}
+.rom h4{font-size:1.15rem;font-weight:800}
+.rom .dev{color:var(--gold);font-size:.82rem;font-weight:700}
+.rom p{color:var(--muted);font-size:.93rem;flex:1}
+.rom .link{
+  color:var(--acc);text-decoration:none;font-size:.88rem;font-weight:700;
+  display:inline-flex;align-items:center;gap:6px;
+}
+.rom .link:hover{color:var(--acc2)}
+
+/* ===== Sub-group titles ===== */
+.subgroup{
+  grid-column:1/-1;display:flex;align-items:center;gap:16px;margin-top:14px;
+}
+.subgroup h3{font-size:1.15rem;font-weight:800;white-space:nowrap}
+.subgroup .line{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.subgroup .cnt{
+  font-size:.75rem;font-weight:700;color:var(--acc2);
+  background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.3);
+  padding:3px 12px;border-radius:99px;white-space:nowrap;
+}
+
+/* ===== Device groups (ROMs) ===== */
+.device-group{margin-bottom:56px}
+.device-group:last-child{margin-bottom:0}
+.device-head{
+  display:flex;align-items:center;gap:22px;margin-bottom:26px;
+  background:linear-gradient(160deg,var(--card),var(--card2));
+  border:1px solid var(--line);border-radius:var(--radius);padding:22px 26px;
+}
+.device-head .dev-img{
+  width:110px;height:110px;border-radius:16px;flex-shrink:0;overflow:hidden;
+  border:1px solid var(--line);background:var(--bg2);
+}
+.device-head .dev-img img{width:100%;height:100%;object-fit:cover}
+.device-head h3{font-size:1.45rem;font-weight:900}
+.device-head .dev-sub{color:var(--muted);font-size:.92rem;margin-top:4px}
+.device-head .dev-cnt{
+  margin-inline-start:auto;font-size:.8rem;font-weight:700;color:var(--acc2);
+  background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.3);
+  padding:5px 16px;border-radius:99px;white-space:nowrap;
+}
+@media(max-width:560px){
+  .device-head{flex-wrap:wrap;gap:14px}
+  .device-head .dev-img{width:80px;height:80px}
+  .device-head .dev-cnt{margin-inline-start:0}
+}
+
+/* ===== Skills ===== */
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.skill{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.skill h4{font-size:1rem;font-weight:800;margin-bottom:12px;color:var(--acc2)}
+.skill .chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-size:.78rem;padding:3px 12px;border-radius:99px;background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--muted)}
+
+/* ===== Contact ===== */
+.contact{text-align:center}
+.contact .cards{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:30px}
+.c-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 34px;text-decoration:none;color:var(--txt);transition:.25s;
+  display:flex;align-items:center;gap:12px;font-weight:700;
+}
+.c-card:hover{transform:translateY(-4px);border-color:var(--acc)}
+.c-card .ic{font-size:1.4rem}
+.c-card small{display:block;color:var(--muted);font-weight:400;font-size:.8rem}
+
+footer{
+  border-top:1px solid var(--line);padding:30px 0;text-align:center;
+  color:var(--muted);font-size:.88rem;
+}
+
+/* ===== Lightbox ===== */
+.lightbox{
+  display:none;position:fixed;inset:0;z-index:100;
+  background:rgba(0,0,0,.9);backdrop-filter:blur(6px);
+  align-items:center;justify-content:center;padding:30px;cursor:zoom-out;
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:92%;max-height:88vh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lightbox .close{
+  position:absolute;top:22px;inset-inline-end:28px;font-size:2rem;color:#fff;cursor:pointer;
+}
+
+.reveal{opacity:0;transform:translateY(26px);transition:.7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== Welcome Toast ===== */
+.welcome-toast{
+  position:fixed;bottom:22px;inset-inline-end:22px;z-index:200;
+  background:linear-gradient(160deg,var(--card),var(--card2));
+  border:1px solid rgba(245,196,81,.4);border-radius:16px;
+  padding:14px 18px;display:flex;align-items:center;gap:12px;
+  box-shadow:0 16px 50px rgba(0,0,0,.5),0 0 40px rgba(245,196,81,.07);
+  transform:translateY(80px);opacity:0;
+  animation:wtoastIn .6s .8s ease forwards;
+  max-width:320px;
+}
+@keyframes wtoastIn{to{transform:none;opacity:1}}
+.welcome-toast.hide{transition:.4s;opacity:0!important;transform:translateY(80px)!important;pointer-events:none}
+.welcome-toast .wt-content{
+  display:flex;align-items:center;gap:12px;
+  transition:opacity .35s ease, transform .35s ease;
+}
+.welcome-toast .wt-content.fade-out{opacity:0;transform:translateY(5px)}
+.welcome-toast .wt-ic{font-size:1.5rem}
+.welcome-toast p{
+  font-weight:700;font-size:.95rem;line-height:1.45;
+  background:linear-gradient(90deg,var(--gold),#ffe29a);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.welcome-toast .wt-close{
+  background:none;border:none;color:var(--muted);font-size:1.1rem;
+  cursor:pointer;padding:2px 6px;border-radius:8px;transition:.2s;line-height:1;
+}
+.welcome-toast .wt-close:hover{color:var(--txt);background:rgba(255,255,255,.08)}
+
+/* ===== Basmala ===== */
+.basmala{
+  text-align:center;padding:0;margin-top:-38px;
+  font-size:clamp(1.9rem,4.2vw,2.8rem);font-weight:900;
+  background:linear-gradient(90deg,var(--gold),#ffe29a,var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  letter-spacing:.5px;
+}
+
+/* ===== Tech Tips ===== */
+.tips-grid{display:flex;flex-direction:column;gap:26px}
+.tip-card{
+  background:linear-gradient(160deg,var(--card),var(--card2));
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:32px;display:flex;flex-direction:column;gap:16px;
+  position:relative;overflow:hidden;
+}
+.tip-card::before{
+  content:"";position:absolute;inset-inline-start:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(180deg,var(--gold),var(--acc2));
+}
+.tip-header{display:flex;flex-direction:column;gap:8px}
+.tip-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(245,196,81,.12);border:1px solid rgba(245,196,81,.35);
+  color:var(--gold);padding:4px 14px;border-radius:99px;font-size:.82rem;font-weight:700;
+  width:fit-content;
+}
+.tip-header h3{font-size:1.35rem;font-weight:800}
+.tip-card p{color:var(--muted);font-size:.96rem;line-height:1.8}
+.tip-card p code{
+  background:rgba(255,255,255,.08);color:var(--acc2);
+  padding:2px 8px;border-radius:6px;font-size:.88rem;font-family:monospace;
+}
+.tip-media{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:18px;margin-top:10px;
+}
+.media-box{
+  background:var(--bg2);border:1px solid var(--line);border-radius:14px;
+  padding:14px;display:flex;flex-direction:column;gap:10px;
+}
+.media-tag{font-size:.82rem;color:var(--acc2);font-weight:700}
+.video-wrapper{
+  position:relative;border-radius:10px;overflow:hidden;
+  border:1px solid var(--line);background:#000;
+}
+.video-wrapper video{
+  width:100%;height:auto;display:block;border-radius:10px;
+  max-height:360px;object-fit:contain;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand"><span data-i18n="brand1">حسام</span> <span data-i18n="brand2">مجرشي</span></div>
+    <ul>
+      <li><a href="#about" data-i18n="nav_about">عنّي</a></li>
+      <li><a href="#experience" data-i18n="nav_exp">الخبرة</a></li>
+      <li><a href="#projects" data-i18n="nav_projects">المشاريع</a></li>
+      <li><a href="#tips" data-i18n="nav_tips">فوائد تقنية</a></li>
+      <li><a href="#roms" data-i18n="nav_roms">رومات أندرويد</a></li>
+      <li><a href="#skills" data-i18n="nav_skills">المهارات</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">تواصل</a></li>
+    </ul>
+    <select id="langSel" aria-label="Language">
+      <option value="ar">العربية</option>
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="it">Italiano</option>
+      <option value="tr">Türkçe</option>
+      <option value="id">Indonesia</option>
+    </select>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="about">
+  <div class="wrap">
+    <div class="basmala">بسم الله الرحمن الرحيم</div>
+    <div class="badge" data-i18n="badge" style="margin-top:30px">متاح لفرص العمل — IT Support &amp; Network</div>
+    <h1><span data-i18n="name_ar">حسام حسن مجرشي</span><br><span class="grad en">Hossam Hassan Majrashi</span></h1>
+<div class="role" data-i18n="role">تخصص شبكات • مطور تطبيقات Flutter &amp; Electron • دعم فني وأنظمة</div>
+    <p class="lead" data-i18n="lead">
+      أطوّر حلولاً برمجية حقيقية تُستخدم يومياً في بيئة العمل: أنظمة إدارة بلاغات،
+      أدوات معالجة بيانات ضخمة (+715 ألف سجل)، تطبيقات إنتاجية، وبناء رومات أندرويد كاملة من المصدر.
+      أحوّل المشاكل التقنية إلى أدوات برمجية فعّالة.
+    </p>
+    <div class="cta">
+      <a class="btn btn-p" href="#projects" data-i18n="cta_projects">🚀 استعرض مشاريعي</a>
+      <a class="btn btn-p" href="assets/cv.pdf" download="Hossam_Majrashi_CV.pdf" data-i18n="cta_cv" style="background:linear-gradient(135deg,var(--gold),#d9a520);box-shadow:0 8px 30px rgba(245,196,81,.35)">📄 تحميل السيرة الذاتية</a>
+      <a class="btn btn-o" href="https://github.com/HossamMajrashi" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-o" href="https://www.linkedin.com/in/hossam-majrashi" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>+12</b><span data-i18n="stat1">مشاريع برمجية منشورة</span></div>
+      <div class="stat"><b>+715K</b><span data-i18n="stat2">سجل بيانات تمت معالجته</span></div>
+      <div class="stat"><b>5</b><span data-i18n="stat3">رومات أندرويد مبنية من المصدر</span></div>
+      <div class="stat"><b>6+</b><span data-i18n="stat4">أشهر خبرة ميدانية في الدعم والأنظمة</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-title reveal">
+      <small data-i18n="exp_small">الخبرة العملية</small>
+      <h2 data-i18n="exp_title">💼 العمل الحالي</h2>
+    </div>
+    <div class="exp-card reveal">
+      <div class="exp-head">
+        <div>
+          <h3 data-i18n="exp1_title">دعم فني / مساعد أنظمة — IT Support &amp; Systems Assistant</h3>
+          <div class="co" data-i18n="exp1_co">شركة ركن المجرة التجارية | Almajarah</div>
+        </div>
+        <div class="period" data-i18n="exp1_period">فبراير 2026 — أغسطس 2026 </div>
+      </div>
+      <p data-i18n="exp1_intro" style="color:var(--muted);margin-top:14px">خلال فترة عملي في الشركة، طوّرت أنظمة برمجية كاملة تُستخدم يومياً من الفروع والموظفين: نظام إدارة بلاغات دعم فني، منصة توزيع برامج داخلية، وأداة معالجة وترحيل بيانات ضخمة — إلى جانب تصميم وتوثيق البنية التحتية للشبكة ومتابعة مهام الصيانة والعتاد.</p>
+      <ul>
+        <li data-i18n="exp1_li1">تصميم وتطوير نظام <b>CaseDesk</b> لإدارة ومتابعة بلاغات الدعم الفني للفروع والموظفين — بمعمارية Offline-First وقاعدتي بيانات (Hive محلياً + MySQL سحابياً عبر PHP REST APIs).</li>
+        <li data-i18n="exp1_li2">تطوير تطبيق <b>IT Software Center</b> لتوزيع البرامج المعتمدة داخل شبكة الشركة مع نظام كشف تحديثات تلقائي ومدير تحميل ذكي.</li>
+        <li data-i18n="exp1_li3">بناء أداة <b>RatilConvert</b> التي عالجت ونقّت <b>+715,463 سجل عميل</b> من نظام Retail Pro وصدّرتها بتوافق 100% مع نظام Odoo ERP — قلّلت وقت الترحيل اليدوي بنسبة 95%.</li>
+<li data-i18n="exp1_li4">تصميم مخطط الشبكة الفيزيائية لمبنى الشركة باستخدام draw.io، متضمناً توزيع السيرفرات، وجدار الحماية (Firewall)، والـ Core Switch، وسويتشات الأقسام، مع توثيق بنية الشبكة وربط الأجهزة وفقاً لأقسام الشركة.</li>        <li data-i18n="exp1_li5">متابعة مهام الصيانة والعتاد، وتحليل مؤشرات الأداء (KPIs) عبر لوحات بيانية تفاعلية، وتوليد تقارير PDF/Excel عربية احترافية.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Flutter / Dart</span><span class="tag">MySQL</span><span class="tag">PHP REST API</span>
+        <span class="tag">Hive</span><span class="tag">Odoo ERP</span><span class="tag">Retail Pro</span>
+        <span class="tag">Cisco CCNA</span><span class="tag">Data Migration</span>
+      </div>
+    </div>
+
+    <div class="exp-card reveal" style="margin-top:22px">
+      <div class="exp-head">
+        <div>
+          <h3 data-i18n="exp2_title">تدريب CCNA — الشبكات</h3>
+          <div class="co" data-i18n="exp2_co">أكاديمية طويق | Tuwaiq Academy</div>
+        </div>
+        <div class="period" style="background:rgba(79,140,255,.12);border-color:rgba(79,140,255,.4);color:var(--acc)" data-i18n="exp2_period">شهادة تدريب</div>
+      </div>
+      <ul>
+        <li data-i18n="exp2_li1">إعداد وتكوين راوترات وسويتشات Cisco من الصفر: Router-on-a-Stick، شبكات VLAN متعددة، وتوجيه OSPF بين الراوترات.</li>
+        <li data-i18n="exp2_li2">تقسيم الشبكات Subnetting حسب عدد الأجهزة (/26 و /27)، وتأمين الأجهزة (كلمات مرور مشفرة، Banner، إغلاق المنافذ غير المستخدمة).</li>
+      </ul>
+      <div class="shots" style="margin-top:16px">
+        <img src="assets/ccna/shot1.png" alt="CCNA lab — Packet Tracer topology" loading="lazy" style="grid-column:1/-1;aspect-ratio:auto">
+      </div>
+      <div class="tags">
+        <span class="tag">Cisco IOS</span><span class="tag">VLANs</span><span class="tag">OSPF</span>
+        <span class="tag">Subnetting</span><span class="tag">Network Security</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" style="background:rgba(255,255,255,.015)">
+  <div class="wrap">
+    <div class="sec-title reveal">
+      <small data-i18n="proj_small">معرض الأعمال</small>
+      <h2 data-i18n="proj_title">🛠️ المشاريع البرمجية</h2>
+      <p data-i18n="proj_desc">مشاريع حقيقية مكتملة ومنشورة على GitHub — من أنظمة إدارة للشركات إلى أدوات إنتاجية لسطح المكتب والجوال.</p>
+    </div>
+    <div class="grid">
+
+      <div class="subgroup reveal">
+        <h3 data-i18n="grp_company">🏢 مشاريع شركة ركن المجرة التجارية</h3>
+        <span class="cnt" data-i18n="grp_company_cnt">3 مشاريع</span>
+        <div class="line"></div>
+      </div>
+
+      <div class="card reveal">
+        <div class="top">
+          <div class="icon"><img src="assets/casedesk/icon.png" alt="CaseDesk icon"></div>
+          <div><h3>CaseDesk</h3><div class="sub" data-i18n="casedesk_sub">نظام إدارة بلاغات الدعم الفني — Flutter Desktop</div></div>
+        </div>
+        <p data-i18n="casedesk_desc">نظام Help Desk متكامل للفروع والموظفين: مزامنة Offline-First (Hive + MySQL)، لوحة تحليلات KPIs تفاعلية، تقارير PDF/Excel عربية، تعبئة تلقائية ذكية للبلاغات، وإشعارات واتساب.</p>
+        <div class="shots">
+          <img src="assets/casedesk/shot1.png" alt="CaseDesk لوحة التحكم" loading="lazy">
+          <img src="assets/casedesk/shot2.png" alt="CaseDesk الإحصائيات" loading="lazy">
+          <img src="assets/casedesk/shot3.png" alt="CaseDesk دمج التقارير" loading="lazy">
+          <img src="assets/casedesk/shot4.png" alt="CaseDesk المهام المنجزة" loading="lazy">
+          <img src="assets/casedesk/shot5.png" alt="CaseDesk التقارير" loading="lazy">
+          <img src="assets/casedesk/shot6.png" alt="CaseDesk الإعدادات" loading="lazy">
+          
+        </div>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">MySQL</span><span class="tag">PHP API</span><span class="tag">fl_chart</span></div>
+      </div>
+
+      <div class="card reveal">
+        <div class="top">
+          <div class="icon"><img src="assets/ratilconvert/icon.png" alt="RatilConvert icon"></div>
+          <div><h3>RatilConvert</h3><div class="sub" data-i18n="ratil_sub">ترحيل بيانات Retail Pro → Odoo ERP</div></div>
+        </div>
+        <p data-i18n="ratil_desc">معالجة وتنقية <b>+715,463 سجل عميل</b> بخوارزميات تنظيف ذكية ومعالجة متوازية (Dart Isolates) دون تجميد الواجهة — دقة 100% وتوفير 95% من وقت الترحيل اليدوي.</p>
+        <div class="shots">
+          <img src="assets/ratilconvert/shot1.png" alt="RatilConvert screenshot 1" loading="lazy">
+          <img src="assets/ratilconvert/shot2.png" alt="RatilConvert screenshot 2" loading="lazy">
+          <img src="assets/ratilconvert/shot3.png" alt="RatilConvert screenshot 3" loading="lazy">
+        </div>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">Dart Isolates</span><span class="tag">Excel Engine</span></div>
+      </div>
+
+      <div class="card reveal">
+        <div class="top">
+          <div class="icon"><img src="assets/itsoftware/icon.png" alt="IT Software Center icon"></div>
+          <div><h3>IT Software Center</h3><div class="sub" data-i18n="itsc_sub">منصة توزيع برامج داخلية للشركات</div></div>
+        </div>
+        <p data-i18n="itsc_desc">تطبيق مؤسسي لتوزيع البرامج المعتمدة داخل شبكة الشركة: مدير تحميل بمؤشر تقدم لحظي (Dio)، كشف تحديثات تلقائي مع بادج متحرك، دعم عربي/إنجليزي ووضع داكن (Material 3).</p>
+        <div class="shots">
+          <img src="assets/itsoftware/shot1.jpg" alt="IT Software Center screenshot 1" loading="lazy">
+          <img src="assets/itsoftware/shot2.png" alt="IT Software Center screenshot 2" loading="lazy">
+        </div>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">Provider</span><span class="tag">Dio</span><span class="tag">MySQL</span></div>
+      </div>
+
+      <div class="subgroup reveal">
+        <h3 data-i18n="grp_personal">👤 مشاريع شخصية — منشورة على GitHub</h3>
+        <span class="cnt" data-i18n="grp_personal_cnt">8 مشاريع</span>
+        <div class="line"></div>
+      </div>
+
+      <div class="card reveal">
+        <div class="top">
+          <div class="icon"><img src="assets/miqyas/icon.png" alt="Miqyas icon"></div>
+          <div><h3>مقياس — Miqyas</h3><div class="sub" data-i18n="miqyas_sub">استوديو الأيقونات والمنطقة الآمنة وقوالب المتاجر — Flutter</div></div>
+        </div>
+        <p data-i18n="miqyas_desc">استوديو تفاعلي لضبط وتوسيط أيقونات التطبيقات بدقة داخل المنطقة الآمنة (Safe-Zone 66×66) لجميع المنصات، مع محاكي أجهزة حي لمعاينة الأيقونة بين التطبيقات، وتوليد صور ترويجية احترافية لمتجر Google Play و App Store بدقة عالية ودفعة واحدة.</p>
+        <div class="shots">
+          <img src="assets/miqyas/shot1.png" alt="Miqyas screenshot 1" loading="lazy">
+          <img src="assets/miqyas/shot2.png" alt="Miqyas screenshot 2" loading="lazy">
+          <img src="assets/miqyas/shot3.png" alt="Miqyas screenshot 3" loading="lazy">
+        </div>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">Device Mockup</span><span class="tag">Safe-Zone</span><span class="tag">Store Templates</span></div>
+        <a class="link" href="https://github.com/Hossam-Majrashi/miqyas" target="_blank" rel="noopener" data-i18n="view_github">عرض على GitHub ←</a>
+      </div>
+
+      <div class="card reveal">
+        <div class="top">
+          <div class="icon"><img src="assets/mufarrigh/icon.png" alt="Mufarrigh icon"></div>
+          <div><h3>مُفرِّغ — Mufarrigh</h3><div class="sub" data-i18n="mufarrigh_sub">استخراج شيتات السبرايت وإزالة الخلفيات — Flutter</div></div>
+        </div>
+        <p data-i18n="mufarrigh_desc">أداة ذكية لمطوري الألعاب ومصممي الرسوم لمعالجة وقص شيتات السبرايت وإزالة الخلفيات بمحرك Pure-Dart وخوارزميات BFS Flood-Fill و Gap Erosion وتنعيم الحواف مع واجهة 3-Pane متكيفة وتصدير دفعي.</p>
+        <div class="shots">
+          <img src="assets/mufarrigh/shot1.png" alt="Mufarrigh screenshot 1" loading="lazy">
+          <img src="assets/mufarrigh/shot2.png" alt="Mufarrigh screenshot 2" loading="lazy">
+          <img src="assets/mufarrigh/shot3.png" alt="Mufarrigh screenshot 3" loading="lazy">
+        </div>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">Dart Vision</span><span class="tag">BFS Flood-Fill</span><span class="tag">Adaptive UI</span></div>
+        <a class="link" href="https://github.com/Hossam-Majrashi/mufarrigh" target="_blank" rel="noopener" data-i18n="view_github">عرض على GitHub ←</a>
+      </div>
+
+      <div class="card reveal">
+        <div class="top">
+          <div class="icon"><img src="assets/twopartcutter/icon.png" alt="TwoPart Cutter icon"></div>
+          <div><h3>TwoPart Cutter</h3><div class="sub" data-i18n="tpc_sub">تقسيم الفيديو — Electron.js + FFmpeg</div></div>
+        </div>
+        <p data-i18n="tpc_desc">تطبيق سطح مكتب لتقسيم الفيديوهات (1/2/3 دقائق أو نصفين) بجودة Lossless 100% عبر Stream Copy، مع كشف تلقائي لكرت الشاشة GPU وواجهة Glassmorphism عصرية. يعمل على Windows وLinux وmacOS.</p>
+        <div class="shots">
+          <img src="assets/twopartcutter/shot1.png" alt="TwoPart Cutter screenshot 1" loading="lazy">
+          <img src="assets/twopartcutter/shot2.png" alt="TwoPart Cutter screenshot 2" loading="lazy">
+          <img src="assets/twopartcutter/shot3.png" alt="TwoPart Cutter screenshot 3" loading="lazy">
+          <img src="assets/twopartcutter/shot4.png" alt="TwoPart Cutter screenshot 4" loading="lazy">
+        </div>
+        <a class="link" href="https://github.com/Hossam-Majrashi/TwoPartCutter" target="_blank" rel="noopener" data-i18n="view_github">عرض على GitHub ←</a>
+      </div>
+
+      <div class="card reveal">
+        <div class="top">
+          <div class="icon"><img src="assets/typeshadow/icon.png" alt="TypeShadow icon"></div>
+          <div><h3>TypeShadow</h3><div class="sub" data-i18n="ts_sub">مدرب سرعة كتابة — Electron.js</div></div>
+        </div>
+        <p data-i18n="ts_desc">مدرب كتابة عابر للمنصات بدعم RTL كامل (عربي/عبري/فارسي)، إحصائيات WPM ودقة مفصلة، إيقاف إجباري عند الخطأ لبناء الذاكرة العضلية، اختصارات نظام عامة وصينية نظام.</p>
+        <div class="shots">
+          <img src="assets/typeshadow/shot1.png" alt="TypeShadow screenshot 1" loading="lazy">
+          <img src="assets/typeshadow/shot2.png" alt="TypeShadow screenshot 2" loading="lazy">
+          <img src="assets/typeshadow/shot3.png" alt="TypeShadow screenshot 3" loading="lazy">
+          <img src="assets/typeshadow/shot4.png" alt="TypeShadow screenshot 4" loading="lazy">
+        </div>
+        <a class="link" href="https://github.com/Hossam-Majrashi/typeshadow" target="_blank" rel="noopener" data-i18n="view_github">عرض على GitHub ←</a>
+      </div>
+
+      <div class="card reveal">
+        <div class="top">
+          <div class="icon"><img src="assets/nextui/icon.png" alt="NextUI Launcher icon"></div>
+          <div><h3>NextUI Launcher</h3><div class="sub" data-i18n="nui_sub">واجهة أندرويد — Kotlin + Jetpack Compose</div></div>
+        </div>
+        <p data-i18n="nui_desc">لانشر أندرويد عصري بمعمارية MVVM وقاعدة Room: تقويم هجري/ميلادي مدمج، ملاحظات على الشاشة الرئيسية، تصنيف تلقائي للتطبيقات، سلة محذوفات، وإخفاء التطبيقات الحساسة.</p>
+        <div class="shots">
+          <img src="assets/nextui/shot1.jpg" alt="NextUI Launcher screenshot 1" loading="lazy">
+          <img src="assets/nextui/shot2.jpg" alt="NextUI Launcher screenshot 2" loading="lazy">
+          <img src="assets/nextui/shot3.jpg" alt="NextUI Launcher screenshot 3" loading="lazy">
+        </div>
+        <div class="tags"><span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span><span class="tag">Room</span><span class="tag">MVVM</span></div>
+        <a class="link" href="https://github.com/Hossam-Majrashi/NextUILauncher" target="_blank" rel="noopener" data-i18n="view_github">عرض على GitHub ←</a>
+      </div>
+
+      <div class="card reveal">
+        <div class="top">
+          <div class="icon"><img src="assets/ratibi30/icon.png" alt="Ratibi 30 icon"></div>
+          <div><h3>Ratibi 30 — راتبي</h3><div class="sub" data-i18n="r30_sub">إدارة الراتب والميزانية — Flutter</div></div>
+        </div>
+        <p data-i18n="r30_desc">تطبيق ميزانية ذكي Offline-First: توزيع تلقائي بقاعدة 50/30/20، ميزانية يومية ديناميكية، تحديات ادخار، قسم صدقات، تقارير بيانية (fl_chart)، وتقويم مالي شهري — بست منصات مدعومة.</p>
+        <div class="shots">
+          <img src="assets/ratibi30/shot1.png" alt="Ratibi 30 screenshot 1" loading="lazy">
+          <img src="assets/ratibi30/shot2.png" alt="Ratibi 30 screenshot 2" loading="lazy">
+          <img src="assets/ratibi30/shot3.png" alt="Ratibi 30 screenshot 3" loading="lazy">
+        </div>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">Riverpod</span><span class="tag">fl_chart</span></div>
+        <a class="link" href="https://github.com/Hossam-Majrashi/ratibi30" target="_blank" rel="noopener" data-i18n="view_github">عرض على GitHub ←</a>
+      </div>
+
+      <div class="card reveal">
+        <div class="top">
+          <div class="icon"><img src="assets/pomodoro/icon.png" alt="Pomodoro Timer icon"></div>
+          <div><h3>Pomodoro Timer</h3><div class="sub" data-i18n="pomo_sub">مؤقت بومودورو للإنتاجية — Flutter</div></div>
+        </div>
+        <p data-i18n="pomo_desc">إدارة جلسات عمل وراحة بتقنية Pomodoro: أهداف يومية وأسبوعية قابلة للتخصيص، تنبيهات صوتية، ثيمات متعددة، وحزم تثبيت لينكس (Flatpak / .desktop) — يعمل على 5 منصات.</p>
+        <div class="shots">
+          <img src="assets/pomodoro/shot1.png" alt="Pomodoro Timer screenshot 1" loading="lazy">
+          <img src="assets/pomodoro/shot2.png" alt="Pomodoro Timer screenshot 2" loading="lazy">
+          <img src="assets/pomodoro/shot3.png" alt="Pomodoro Timer screenshot 3" loading="lazy">
+        </div>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">Flatpak</span><span class="tag">Cross-platform</span></div>
+        <a class="link" href="https://github.com/Hossam-Majrashi/Pomodoro_Timer" target="_blank" rel="noopener" data-i18n="view_github">عرض على GitHub ←</a>
+      </div>
+
+      <div class="card reveal">
+        <div class="top">
+          <div class="icon"><img src="assets/loopmark/icon.png" alt="LoopMark icon"></div>
+          <div><h3>LoopMark</h3><div class="sub" data-i18n="lm_sub">توليد فيديوهات علامة مائية — Flutter + FFmpeg</div></div>
+        </div>
+        <p data-i18n="lm_desc">توليد فيديوهات MP4 بعلامة مائية نصية متحركة دون أي فيديو مدخل: رسم النص العربي بمحرك Flutter Canvas بدقة فائقة مع دعم كامل للتشكيل، وتصدير عبر FFmpeg على أندرويد وويندوز.</p>
+        <div class="shots">
+          <img src="assets/loopmark/shot1.png" alt="LoopMark screenshot 1" loading="lazy">
+          <img src="assets/loopmark/shot2.png" alt="LoopMark screenshot 2" loading="lazy">
+          <img src="assets/loopmark/shot3.png" alt="LoopMark screenshot 3" loading="lazy">
+        </div>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">FFmpeg</span><span class="tag">Canvas</span></div>
+        <a class="link" href="https://github.com/Hossam-Majrashi/LoopMark" target="_blank" rel="noopener" data-i18n="view_github">عرض على GitHub ←</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= TECH TIPS ================= -->
+<section id="tips">
+  <div class="wrap">
+    <div class="sec-title reveal">
+      <small data-i18n="tips_small">إرشادات وتجارب وحلول</small>
+      <h2 data-i18n="tips_title">💡 فوائد تقنية</h2>
+      <p data-i18n="tips_desc">شروحات وحلول للمشاكل البرمجية وأدوات أتمتة الأنظمة المكتسبة أثناء تطوير وإدارة المشاريع.</p>
+    </div>
+    
+    <div class="tips-grid">
+      <!-- Tip 1: Gradle & Flutter -->
+      <div class="tip-card reveal">
+        <div class="top">
+          <div class="icon" style="background:linear-gradient(135deg,rgba(245,196,81,.2),rgba(239,68,68,.15));">
+            <span style="font-size:1.6rem;">⚠️</span>
+          </div>
+          <div>
+            <h3 data-i18n="tip1_title">الاستخدام الصحيح لإضافة Gradle for Java وتفادي تعارض الإصدارات</h3>
+            <div class="sub" data-i18n="tip1_badge" style="color:var(--gold);font-weight:700;">تنبيه وحل مشكلة بناء في Flutter</div>
+          </div>
+        </div>
+        <p data-i18n="tip1_desc">
+          عند تفعيل إضافة <b>Gradle for Java</b> في بيئة التطوير (VS Code / Antigravity)، إذا كان مشروعك <b>Flutter</b> ويحتوي على عدة نسخ أو إصدارات مختلفة من Gradle، ستحاول الإضافة فحص وبناء كل نسخة بشكل منفصل، مما ينتج عنه خطأ تعارض النسخ (مثل: <code>Minimum supported Gradle version is 9.6.0. Current version is 9.4.0</code>) وفشل في البناء. الحل هو ضبط وتفعيل الأداة بشكل مخصص للمشاريع المتوافقة أو تعطيل الفحص التلقائي الشامل لمجلدات Flutter.
+        </p>
+        <div class="tip-media">
+          <div class="media-box">
+            <span class="media-tag" data-i18n="tip_img_tag">📸 لقطة شاشة الإضافة والخطأ</span>
+            <div class="shots" style="grid-template-columns:1fr;">
+              <img src="assets/tips/gradle-shot.png" alt="Gradle for Java Configuration Screenshot" loading="lazy" style="aspect-ratio:16/9;width:100%;">
+            </div>
+          </div>
+          <div class="media-box">
+            <span class="media-tag" data-i18n="tip_vid_tag">🎬 فيديو توضيحي</span>
+            <div class="video-wrapper">
+              <video controls preload="metadata" playsinline poster="assets/tips/gradle-shot.png">
+                <source src="assets/tips/gradle-video.webm" type="video/webm">
+                متصفحك لا يدعم تشغيل الفيديو.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tip 2: Flutter Linux Installer -->
+      <div class="card reveal" style="background:linear-gradient(160deg,var(--card),var(--card2));">
+        <div class="top">
+          <div class="icon"><img src="assets/tips/icon.png" alt="Flutter Linux Installer icon"></div>
+          <div>
+            <h3>Flutter Linux Installer</h3>
+            <div class="sub" data-i18n="tip2_sub">أداة أتمتة لينكس — Bash + Arch Linux</div>
+          </div>
+        </div>
+        <p data-i18n="tip2_desc">
+          سكريبت Bash لأتمتة تثبيت أحدث نسخة مستقرة من Flutter SDK على أنظمة Arch Linux: يقوم بجلب الإصدار الأحدث تلقائياً من المصدر الرسمي، ضبط متغيرات البيئة لثلاث بيئات شل مختلفة (Bash و Zsh و Fish)، وتثبيت وضبط أحدث نسخة من OpenJDK كافتراضية عبر <code>archlinux-java</code> بضغطة واحدة.
+        </p>
+        <div class="tags">
+          <span class="tag">Arch Linux</span><span class="tag">Bash Script</span><span class="tag">Flutter SDK</span><span class="tag">OpenJDK</span><span class="tag">Automation</span>
+        </div>
+        <a class="link" href="https://github.com/Hossam-Majrashi/flutter-linux-installer" target="_blank" rel="noopener" data-i18n="view_github">عرض على GitHub ←</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROMS ================= -->
+<section id="roms">
+  <div class="wrap">
+    <div class="sec-title reveal">
+      <small data-i18n="roms_small">أنظمة التشغيل</small>
+      <h2 data-i18n="roms_title">🤖 بناء رومات أندرويد مخصصة من المصدر</h2>
+      <p data-i18n="roms_desc">بناء كامل لرومات AOSP من المصدر مع ضبط النواة (Kernel) وشجرة الجهاز (Device Tree) وإدارة Vendor Blobs.</p>
+    </div>
+    <!-- ===== Device: Xiaomi Mi 10T Pro ===== -->
+    <div class="device-group reveal">
+      <div class="device-head">
+        <div class="dev-img"><img src="assets/mi10tpro/shot1.jpg" alt="Xiaomi Mi 10T Pro" loading="lazy"></div>
+        <div>
+          <h3>Xiaomi Mi 10T Pro <span class="en">(Apollo)</span></h3>
+          <div class="dev-sub" data-i18n="dev1_sub">رومات مبنية من المصدر لهذا الجهاز</div>
+        </div>
+        <span class="dev-cnt" data-i18n="dev1_cnt">2 روم</span>
+      </div>
+      <div class="grid">
+        <div class="rom reveal">
+          <div class="top">
+            <div class="icon"><img src="assets/roms/evolutionx.png" alt="Evolution X logo"></div>
+            <div><h4>Evolution X — Android 14</h4><div class="dev">Xiaomi Mi 10T Pro (Apollo)</div></div>
+          </div>
+          <p data-i18n="rom1_desc">بناء AOSP كامل من المصدر مع طبقة Evolution X، ضبط نواة مخصص وشجرة جهاز، إصلاحات HAL وإعداد الكاميرا، وتجربة Pixel على عتاد شاومي.</p>
+          <div class="tags"><span class="tag">AOSP</span><span class="tag">Kernel</span><span class="tag">Device Tree</span></div>
+          <a class="link" href="https://github.com/evolution-x" target="_blank" rel="noopener" data-i18n="view_github">عرض على GitHub ←</a>
+        </div>
+        <div class="rom reveal">
+          <div class="top">
+            <div class="icon"><img src="assets/roms/infinityx.jpg" alt="Infinity X logo"></div>
+            <div><h4>Infinity X — Android 16</h4><div class="dev">Xiaomi Mi 10T Pro (Apollo)</div></div>
+          </div>
+          <p data-i18n="rom2_desc">بناء AOSP أندرويد 16 من المصدر مع مميزات Infinity X، ضبط Kernel وDevice Tree، وإدارة Vendor Blobs وHAL.</p>
+          <div class="tags"><span class="tag">AOSP</span><span class="tag">Android 16</span><span class="tag">Vendor Blobs</span></div>
+          <a class="link" href="https://github.com/projectinfinity-x" target="_blank" rel="noopener" data-i18n="view_github">عرض على GitHub ←</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Device: Motorola Moto G54 5G ===== -->
+    <div class="device-group reveal">
+      <div class="device-head">
+        <div class="dev-img"><img src="assets/motog54/shot1.jpg" alt="Motorola Moto G54 5G" loading="lazy"></div>
+        <div>
+          <h3>Motorola Moto G54 5G</h3>
+          <div class="dev-sub" data-i18n="dev2_sub">رومات مبنية من المصدر لهذا الجهاز</div>
+        </div>
+        <span class="dev-cnt" data-i18n="dev2_cnt">3 رومات</span>
+      </div>
+      <div class="grid">
+        <div class="rom reveal">
+          <div class="top">
+            <div class="icon"><img src="assets/roms/pixelos.png" alt="PixelOS logo"></div>
+            <div><h4>PixelOS — Android 16</h4><div class="dev">Motorola Moto G54 5G</div></div>
+          </div>
+          <p data-i18n="rom3_desc">بناء PixelOS من المصدر مع ترجمة النواة وإعداد شجرة الجهاز واستخراج Vendor Blobs — تجربة Pixel نظيفة على عتاد موتورولا.</p>
+          <div class="tags"><span class="tag">AOSP</span><span class="tag">Kernel</span><span class="tag">HAL</span></div>
+          <a class="link" href="https://github.com/PixelOS-AOSP" target="_blank" rel="noopener" data-i18n="view_github">عرض على GitHub ←</a>
+        </div>
+        <div class="rom reveal">
+          <div class="top">
+            <div class="icon"><img src="assets/roms/infinityx.jpg" alt="Infinity X logo"></div>
+            <div><h4>Infinity X Vanilla — Android 16</h4><div class="dev">Motorola Moto G54 5G</div></div>
+          </div>
+          <p data-i18n="rom4_desc">نسخة Vanilla بدون خدمات Google (GApps) — تجربة AOSP نقية 100% على نفس الجهاز.</p>
+          <div class="tags"><span class="tag">AOSP</span><span class="tag">Vanilla</span><span class="tag" data-i18n="rom4_tag3">بدون GApps</span></div>
+          <a class="link" href="https://github.com/projectinfinity-x" target="_blank" rel="noopener" data-i18n="view_github">عرض على GitHub ←</a>
+        </div>
+        <div class="rom reveal">
+          <div class="top">
+            <div class="icon"><img src="assets/roms/lineageos.avif" alt="LineageOS logo"></div>
+            <div><h4>LineageOS 23.2</h4><div class="dev">Motorola Moto G54 5G</div></div>
+          </div>
+          <p data-i18n="rom5_desc">دعم وبناء روم LineageOS 23.2 الرسمية لجهاز Moto G54 5G — روم مفتوحة المصدر مستقرة وخفيفة مع تحديثات أمان دورية.</p>
+          <div class="tags"><span class="tag">LineageOS</span><span class="tag" data-i18n="rom5_tag2">مفتوح المصدر</span><span class="tag" data-i18n="rom5_tag3">تحديثات أمان</span></div>
+          <a class="link" href="https://github.com/lineageos" target="_blank" rel="noopener" data-i18n="view_github">عرض على GitHub ←</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" style="background:rgba(255,255,255,.015)">
+  <div class="wrap">
+    <div class="sec-title reveal">
+      <small data-i18n="skills_small">القدرات التقنية</small>
+      <h2 data-i18n="skills_title">⚡ المهارات</h2>
+    </div>
+    <div class="skills">
+      <div class="skill reveal">
+        <h4 data-i18n="sk1">تطوير التطبيقات</h4>
+        <div class="chips"><span class="chip">Flutter / Dart</span><span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Electron.js</span><span class="chip">JavaScript / HTML / CSS</span></div>
+      </div>
+      <div class="skill reveal">
+        <h4 data-i18n="sk2">قواعد البيانات والخلفية</h4>
+        <div class="chips"><span class="chip">MySQL / MariaDB</span><span class="chip">PHP REST API</span><span class="chip">Hive (NoSQL)</span><span class="chip">Room DB</span><span class="chip">SQLite</span></div>
+      </div>
+      <div class="skill reveal">
+        <h4 data-i18n="sk3">الشبكات والأنظمة</h4>
+        <div class="chips"><span class="chip">Cisco CCNA</span><span class="chip">VLANs / OSPF</span><span class="chip">Subnetting</span><span class="chip">Windows / Linux</span><span class="chip">IT Support</span></div>
+      </div>
+      <div class="skill reveal">
+        <h4 data-i18n="sk4">أندرويد متقدم</h4>
+        <div class="chips"><span class="chip">AOSP Builds</span><span class="chip">Custom ROMs</span><span class="chip">Kernel / Device Tree</span><span class="chip">Vendor Blobs / HAL</span></div>
+      </div>
+      <div class="skill reveal">
+        <h4 data-i18n="sk5">البيانات والوسائط</h4>
+        <div class="chips"><span class="chip">FFmpeg</span><span class="chip">Excel / PDF Engines</span><span class="chip">Data Migration (ETL)</span><span class="chip">Odoo ERP</span><span class="chip">Retail Pro</span></div>
+      </div>
+      <div class="skill reveal">
+        <h4 data-i18n="sk6">أدوات ومنهجيات</h4>
+        <div class="chips"><span class="chip">Git / GitHub</span><span class="chip">Provider / Riverpod / MVVM</span><span class="chip">Offline-First</span><span class="chip">Flatpak / AppImage</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="sec-title reveal">
+      <small data-i18n="contact_small">لنتحدث</small>
+      <h2 data-i18n="contact_title">📬 تواصل معي</h2>
+      <p data-i18n="contact_desc">منفتح على فرص العمل في الدعم الفني، الأنظمة، وتطوير التطبيقات.</p>
+    </div>
+    <div class="cards reveal">
+      <a class="c-card" href="mailto:hossam.majrashi@gmail.com">
+        <span class="ic">✉️</span>
+        <span><span data-i18n="contact_email">البريد الإلكتروني</span><small class="en">hossam.majrashi@gmail.com</small></span>
+      </a>
+      <a class="c-card" href="tel:+966559253811">
+        <span class="ic">📱</span>
+        <span><span data-i18n="contact_phone">رقم التواصل</span><small class="en" dir="ltr">0559253811</small></span>
+      </a>
+      <a class="c-card" href="assets/cv.pdf" download="Hossam_Majrashi_CV.pdf">
+        <span class="ic">📄</span>
+        <span><span data-i18n="contact_cv">تحميل السيرة الذاتية</span><small class="en">PDF</small></span>
+      </a>
+      <a class="c-card" href="https://github.com/HossamMajrashi" target="_blank" rel="noopener">
+        <span class="ic">🐙</span>
+        <span>GitHub<small class="en">github.com/HossamMajrashi</small></span>
+      </a>
+      <a class="c-card" href="https://www.linkedin.com/in/hossam-majrashi" target="_blank" rel="noopener">
+        <span class="ic">💼</span>
+        <span>LinkedIn<small class="en">linkedin.com/in/hossam-majrashi</small></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" data-i18n="footer">
+    صُمم وطُوّر بواسطة <b>حسام حسن مجرشي</b> © 2026 — جميع المشاريع متاحة على GitHub
+  </div>
+</footer>
+
+<div class="welcome-toast" id="welcomeToast">
+  <span class="wt-ic" id="wtIcon">🌙</span>
+  <p id="wtText">لا تنسى ذكر الله<br>قول ما شاء الله تبارك الله</p>
+  <button class="wt-close" id="welcomeClose" aria-label="إغلاق">✕</button>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <span class="close" id="lbClose">✕</span>
+  <img id="lbImg" src="" alt="screenshot preview">
+</div>
+
+<script>
+// Welcome toast alternating random message
+const wToast = document.getElementById('welcomeToast');
+const wtIcon = document.getElementById('wtIcon') || (wToast ? wToast.querySelector('.wt-ic') : null);
+const wtText = document.getElementById('wtText') || (wToast ? wToast.querySelector('p') : null);
+
+const toastMessages = [
+  {
+    icon: '🌙',
+    html: 'لا تنسى ذكر الله<br>قول ما شاء الله تبارك الله'
+  },
+  {
+    icon: '✨',
+    html: 'صلّوا على النبي محمد<br>صلى الله عليه وسلم'
+  }
+];
+
+// Alternating sequentially on each visit/refresh (0, 1, 0, 1...)
+let lastToastIdx = localStorage.getItem('last-toast-idx');
+let nextToastIdx = (lastToastIdx === '0') ? 1 : 0;
+localStorage.setItem('last-toast-idx', String(nextToastIdx));
+
+const pickedToast = toastMessages[nextToastIdx];
+if (wtIcon) wtIcon.textContent = pickedToast.icon;
+if (wtText) wtText.innerHTML = pickedToast.html;
+
+const wCloseBtn = document.getElementById('welcomeClose');
+if (wCloseBtn && wToast) {
+  wCloseBtn.addEventListener('click', () => {
+    wToast.classList.add('hide');
+    setTimeout(() => wToast.remove(), 450);
+  });
+}
+
+// Scroll reveal
+const io = new IntersectionObserver(es=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Lightbox
+const lb=document.getElementById('lightbox'), lbImg=document.getElementById('lbImg');
+document.querySelectorAll('.shots img, .media-box img').forEach(img=>{
+  img.addEventListener('click',()=>{ lbImg.src=img.src; lb.classList.add('open'); });
+});
+lb.addEventListener('click',()=>lb.classList.remove('open'));
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') lb.classList.remove('open'); });
+
+// ===== i18n =====
+const AR = {};
+document.querySelectorAll('[data-i18n]').forEach(el=>{ AR[el.dataset.i18n] = el.innerHTML; });
+
+const T = {
+en:{
+  brand1:"Hossam", brand2:"Majrashi",
+  nav_about:"About", nav_exp:"Experience", nav_projects:"Projects", nav_roms:"Android ROMs", nav_skills:"Skills", nav_contact:"Contact",
+  badge:"Open to work — IT Support & Network",
+  name_ar:"Hossam Hassan Majrashi",
+  role:"Network Specialist • Flutter & Electron App Developer • IT Support & Systems",
+  lead:"I build real software solutions used daily in work environments: ticket management systems, big-data processing tools (+715K records), productivity apps, and full Android ROM builds from source. I turn technical problems into effective software tools.",
+  cta_projects:"🚀 View my projects",
+  cta_cv:"📄 Download CV",
+  stat1:"Published software projects", stat2:"Data records processed", stat3:"Android ROMs built from source", stat4:"Months of field experience in support & systems",
+  exp_small:"Work Experience", exp_title:"💼 Current Job",
+  exp1_title:"IT Support / Systems Assistant — IT Support & Systems Assistant",
+  exp1_co:"Almajarah Company",
+  exp1_period:"February 2026 — August 2026",
+  exp1_li1:"Designed and developed <b>CaseDesk</b>, a support ticket management system for branches and employees — Offline-First architecture with dual databases (local Hive + cloud MySQL via PHP REST APIs).",
+  exp1_li2:"Developed <b>IT Software Center</b> app to distribute approved software inside the company network with automatic update detection and a smart download manager.",
+  exp1_li3:"Built <b>RatilConvert</b>, which processed and cleaned <b>+715,463 customer records</b> from Retail Pro and exported them with 100% compatibility to Odoo ERP — cut manual migration time by 95%.",
+  exp1_li4:"Designed the company's physical network diagram using draw.io, including server distribution, firewall, core switch, and department switches, with full network documentation.",
+  exp1_li5:"Handled maintenance and hardware tasks, analyzed KPIs via interactive dashboards, and generated professional Arabic PDF/Excel reports.",
+  exp1_intro:"During my time at the company, I developed complete software systems used daily by branches and employees: a support ticket management system, an internal software distribution platform, and a big-data processing & migration tool — alongside designing and documenting the network infrastructure and handling maintenance & hardware tasks.",
+  exp2_title:"CCNA Training — Networking",
+  exp2_co:"Tuwaiq Academy",
+  exp2_period:"Training Certificate",
+  exp2_li1:"Configured Cisco routers and switches from scratch: Router-on-a-Stick, multiple VLANs, and OSPF routing between routers.",
+  exp2_li2:"Subnetting based on device count (/26 and /27), and device hardening (encrypted passwords, banners, closing unused ports).",
+  proj_small:"Portfolio", proj_title:"🛠️ Software Projects",
+  proj_desc:"Real, completed projects published on GitHub — from enterprise management systems to desktop and mobile productivity tools.",
+  grp_company:"🏢 Almajarah Company Projects", grp_company_cnt:"3 projects",
+  grp_personal:"👤 Personal Projects — Published on GitHub", grp_personal_cnt:"8 projects",
+  casedesk_sub:"IT support ticket management system — Flutter Desktop",
+  casedesk_desc:"Complete Help Desk system for branches and employees: Offline-First sync (Hive + MySQL), interactive KPI analytics dashboard, Arabic PDF/Excel reports, smart ticket auto-fill, and WhatsApp notifications.",
+  ratil_sub:"Retail Pro → Odoo ERP data migration",
+  ratil_desc:"Processed and cleaned <b>+715,463 customer records</b> with smart cleaning algorithms and parallel processing (Dart Isolates) without freezing the UI — 100% accuracy and 95% less manual migration time.",
+  itsc_sub:"Internal software distribution platform for enterprises",
+  itsc_desc:"Enterprise app for distributing approved software inside the company network: download manager with live progress (Dio), automatic update detection with animated badge, Arabic/English support and dark mode (Material 3).",
+  tpc_sub:"Video splitting — Electron.js + FFmpeg",
+  tpc_desc:"Desktop app for splitting videos (1/2/3 minutes or halves) at 100% lossless quality via Stream Copy, with automatic GPU detection and a modern Glassmorphism UI. Runs on Windows, Linux and macOS.",
+  ts_sub:"Typing speed trainer — Electron.js",
+  ts_desc:"Cross-platform typing trainer with full RTL support (Arabic/Hebrew/Persian), detailed WPM and accuracy stats, forced stop on error to build muscle memory, global shortcuts and system tray.",
+  nui_sub:"Android launcher — Kotlin + Jetpack Compose",
+  nui_desc:"Modern Android launcher with MVVM architecture and Room DB: built-in Hijri/Gregorian calendar, home-screen notes, automatic app categorization, trash bin, and hiding sensitive apps.",
+  r30_sub:"Salary & budget management — Flutter",
+  r30_desc:"Smart Offline-First budget app: automatic 50/30/20 distribution, dynamic daily budget, savings challenges, charity section, charts (fl_chart), and a monthly financial calendar — six supported platforms.",
+  pomo_sub:"Pomodoro productivity timer — Flutter",
+  pomo_desc:"Work/break session management with the Pomodoro technique: customizable daily and weekly goals, sound alerts, multiple themes, and Linux packages (Flatpak / .desktop) — runs on 5 platforms.",
+  lm_sub:"Watermark video generator — Flutter + FFmpeg",
+  lm_desc:"Generates MP4 videos with an animated text watermark without any input video: Arabic text rendered with Flutter Canvas engine at high fidelity with full diacritics support, exported via FFmpeg on Android and Windows.",
+  roms_small:"Operating Systems", roms_title:"🤖 Building Custom Android ROMs from Source",
+  roms_desc:"Full AOSP ROM builds from source with kernel tuning, device tree setup, and vendor blob management.",
+  rom1_desc:"Full AOSP build from source with the Evolution X layer, custom kernel tuning and device tree, HAL fixes and camera setup, and a Pixel experience on Xiaomi hardware.",
+  rom2_desc:"AOSP Android 16 build from source with Infinity X features, kernel and device tree tuning, and vendor blob & HAL management.",
+  rom3_desc:"PixelOS build from source with kernel compilation, device tree setup and vendor blob extraction — a clean Pixel experience on Motorola hardware.",
+  rom4_desc:"Vanilla build without Google services (GApps) — a 100% pure AOSP experience on the same device.",
+  rom4_tag3:"No GApps",
+  rom5_desc:"Maintaining and building the official LineageOS 23.2 ROM for the Moto G54 5G — a stable, lightweight open-source ROM with regular security updates.",
+  rom5_tag2:"Open Source", rom5_tag3:"Security Updates",
+  dev1_sub:"ROMs built from source for this device", dev1_cnt:"2 ROMs",
+  dev2_sub:"ROMs built from source for this device", dev2_cnt:"3 ROMs",
+  skills_small:"Technical Capabilities", skills_title:"⚡ Skills",
+  sk1:"App Development", sk2:"Databases & Backend", sk3:"Networks & Systems", sk4:"Advanced Android", sk5:"Data & Media", sk6:"Tools & Methodologies",
+  contact_small:"Let's talk", contact_title:"📬 Contact Me",
+  contact_desc:"Open to job opportunities in IT support, systems, and app development.",
+  contact_email:"Email", contact_phone:"Phone", contact_cv:"Download CV",
+  view_github:"View on GitHub →",
+  nav_tips:"Tech Tips",
+  miqyas_sub:"App icon safe-zone studio & store mockups — Flutter",
+  miqyas_desc:"Interactive studio for developers to accurately align app icons within the 66×66 safe zone across all platforms, featuring a live multi-device mockup preview and automated store screenshot generator for Google Play and App Store.",
+  mufarrigh_sub:"Sprite sheet extractor & background remover — Flutter + Dart Vision",
+  mufarrigh_desc:"Smart desktop & mobile tool to slice sprite sheets and remove backgrounds using a pure-Dart engine, BFS Flood-Fill, and gap erosion with adaptive 3-pane UI and batch export.",
+  tips_small:"Guides, insights & solutions",
+  tips_title:"💡 Tech Tips & Solutions",
+  tips_desc:"Practical guides, troubleshooting insights, and automation tools acquired during development and systems administration.",
+  tip1_badge:"Flutter Build Warning & Fix",
+  tip1_title:"Correct usage of Gradle for Java extension to prevent version conflicts",
+  tip1_desc:"When enabling the <b>Gradle for Java</b> extension in your IDE (VS Code / Antigravity), if your <b>Flutter</b> project contains multiple Gradle versions or modules, the extension attempts to discover and build each one independently. This can trigger version mismatch errors (e.g. <code>Minimum supported Gradle version is 9.6.0. Current version is 9.4.0</code>) and cause build failures. The recommended approach is scoping the extension to supported workspaces or disabling automatic deep project discovery for Flutter subdirectories.",
+  tip2_badge:"Linux Automation Tool",
+  tip2_sub:"Linux automation tool — Bash + Arch Linux",
+  tip2_title:"Flutter Installer for Arch Linux — Automated SDK Setup",
+  tip2_desc:"Bash script that automates installing the latest stable Flutter SDK on Arch Linux: automatically fetches the newest release from the official source, configures environment variables across three shells (Bash, Zsh, and Fish), and sets the latest OpenJDK as default via <code>archlinux-java</code> in one step.",
+  tip_img_tag:"📸 Extension & Error Screenshot",
+  tip_vid_tag:"🎬 Demonstration Video",
+  footer:"Designed & developed by <b>Hossam Hassan Majrashi</b> © 2026 — All projects available on GitHub"
+},
+es:{
+  brand1:"Hossam", brand2:"Majrashi",
+  nav_about:"Sobre mí", nav_exp:"Experiencia", nav_projects:"Proyectos", nav_roms:"ROMs Android", nav_skills:"Habilidades", nav_contact:"Contacto",
+  badge:"Disponible para trabajar — IT Support & Network",
+  name_ar:"Hossam Hassan Majrashi",
+  role:"Especialista en Redes • Desarrollador Flutter & Electron • Soporte Técnico y Sistemas",
+  lead:"Desarrollo soluciones de software reales usadas a diario en entornos de trabajo: sistemas de gestión de tickets, herramientas de procesamiento de datos (+715K registros), apps de productividad y compilación completa de ROMs Android desde el código fuente.",
+  cta_projects:"🚀 Ver mis proyectos",
+  cta_cv:"📄 Descargar CV",
+  stat1:"Proyectos de software publicados", stat2:"Registros de datos procesados", stat3:"ROMs Android compiladas desde la fuente", stat4:"Meses de experiencia en soporte y sistemas",
+  exp_small:"Experiencia Laboral", exp_title:"💼 Trabajo Actual",
+  exp1_title:"Soporte Técnico / Asistente de Sistemas",
+  exp1_co:"Empresa Almajarah",
+  exp1_period:"Febrero 2026 — Agosto 2026",
+  exp1_li1:"Diseñé y desarrollé <b>CaseDesk</b>, un sistema de gestión de tickets de soporte para sucursales y empleados — arquitectura Offline-First con doble base de datos (Hive local + MySQL en la nube vía PHP REST APIs).",
+  exp1_li2:"Desarrollé la app <b>IT Software Center</b> para distribuir software aprobado dentro de la red de la empresa con detección automática de actualizaciones y un gestor de descargas inteligente.",
+  exp1_li3:"Construí <b>RatilConvert</b>, que procesó y limpió <b>+715.463 registros de clientes</b> de Retail Pro y los exportó con 100% de compatibilidad a Odoo ERP — redujo el tiempo de migración manual en un 95%.",
+  exp1_li4:"Diseñé el diagrama de red física del edificio con draw.io, incluyendo distribución de servidores, firewall, switch principal y switches de departamentos, con documentación completa.",
+  exp1_li5:"Gestioné tareas de mantenimiento y hardware, analicé KPIs con paneles interactivos y generé informes profesionales en PDF/Excel.",
+  exp1_intro:"Durante mi tiempo en la empresa, desarrollé sistemas de software completos usados a diario por sucursales y empleados: un sistema de gestión de tickets de soporte, una plataforma interna de distribución de software y una herramienta de procesamiento y migración de datos masivos — además de diseñar y documentar la infraestructura de red y gestionar tareas de mantenimiento y hardware.",
+  exp2_title:"Formación CCNA — Redes",
+  exp2_co:"Academia Tuwaiq",
+  exp2_period:"Certificado de formación",
+  exp2_li1:"Configuré routers y switches Cisco desde cero: Router-on-a-Stick, múltiples VLANs y enrutamiento OSPF entre routers.",
+  exp2_li2:"Subnetting según número de dispositivos (/26 y /27) y endurecimiento de dispositivos (contraseñas cifradas, banners, cierre de puertos no usados).",
+  proj_small:"Portafolio", proj_title:"🛠️ Proyectos de Software",
+  proj_desc:"Proyectos reales completados y publicados en GitHub — desde sistemas de gestión empresarial hasta herramientas de productividad.",
+  grp_company:"🏢 Proyectos de la empresa Almajarah", grp_company_cnt:"3 proyectos",
+  grp_personal:"👤 Proyectos personales — Publicados en GitHub", grp_personal_cnt:"8 proyectos",
+  casedesk_sub:"Sistema de gestión de tickets de soporte — Flutter Desktop",
+  casedesk_desc:"Sistema Help Desk completo para sucursales y empleados: sincronización Offline-First (Hive + MySQL), panel de KPIs interactivo, informes PDF/Excel, autocompletado inteligente y notificaciones de WhatsApp.",
+  ratil_sub:"Migración de datos Retail Pro → Odoo ERP",
+  ratil_desc:"Procesé y limpié <b>+715.463 registros de clientes</b> con algoritmos inteligentes y procesamiento paralelo (Dart Isolates) sin congelar la interfaz — 100% de precisión y 95% menos tiempo de migración manual.",
+  itsc_sub:"Plataforma interna de distribución de software",
+  itsc_desc:"App empresarial para distribuir software aprobado en la red de la empresa: gestor de descargas con progreso en vivo (Dio), detección automática de actualizaciones, soporte árabe/inglés y modo oscuro (Material 3).",
+  tpc_sub:"División de video — Electron.js + FFmpeg",
+  tpc_desc:"App de escritorio para dividir videos (1/2/3 minutos o mitades) con calidad 100% lossless vía Stream Copy, detección automática de GPU e interfaz Glassmorphism moderna. Funciona en Windows, Linux y macOS.",
+  ts_sub:"Entrenador de mecanografía — Electron.js",
+  ts_desc:"Entrenador de escritura multiplataforma con soporte RTL completo (árabe/hebreo/persa), estadísticas detalladas de WPM y precisión, parada forzada ante errores, atajos globales y bandeja del sistema.",
+  nui_sub:"Launcher de Android — Kotlin + Jetpack Compose",
+  nui_desc:"Launcher moderno con arquitectura MVVM y Room DB: calendario Hijri/Gregoriano integrado, notas en pantalla principal, categorización automática de apps, papelera y ocultación de apps sensibles.",
+  r30_sub:"Gestión de salario y presupuesto — Flutter",
+  r30_desc:"App de presupuesto inteligente Offline-First: distribución automática 50/30/20, presupuesto diario dinámico, retos de ahorro, sección de caridad, gráficos (fl_chart) y calendario financiero mensual — seis plataformas.",
+  pomo_sub:"Temporizador Pomodoro — Flutter",
+  pomo_desc:"Gestión de sesiones de trabajo y descanso con la técnica Pomodoro: objetivos diarios y semanales personalizables, alertas sonoras, múltiples temas y paquetes Linux (Flatpak / .desktop) — 5 plataformas.",
+  lm_sub:"Generador de videos con marca de agua — Flutter + FFmpeg",
+  lm_desc:"Genera videos MP4 con marca de agua de texto animada sin video de entrada: texto árabe renderizado con Flutter Canvas en alta fidelidad, exportado vía FFmpeg en Android y Windows.",
+  roms_small:"Sistemas Operativos", roms_title:"🤖 Compilación de ROMs Android personalizadas desde la fuente",
+  roms_desc:"Compilación completa de ROMs AOSP desde la fuente con ajuste de kernel, device tree y gestión de vendor blobs.",
+  rom1_desc:"Compilación AOSP completa desde la fuente con la capa Evolution X, kernel personalizado y device tree, correcciones HAL y configuración de cámara — experiencia Pixel en hardware Xiaomi.",
+  rom2_desc:"Compilación AOSP Android 16 desde la fuente con funciones Infinity X, ajuste de kernel y device tree, y gestión de vendor blobs y HAL.",
+  rom3_desc:"Compilación de PixelOS desde la fuente con compilación de kernel, device tree y extracción de vendor blobs — experiencia Pixel limpia en hardware Motorola.",
+  rom4_desc:"Versión Vanilla sin servicios de Google (GApps) — experiencia AOSP 100% pura en el mismo dispositivo.",
+  rom4_tag3:"Sin GApps",
+  rom5_desc:"Mantenimiento y compilación de la ROM oficial LineageOS 23.2 para el Moto G54 5G — ROM de código abierto estable y ligera con actualizaciones de seguridad periódicas.",
+  rom5_tag2:"Código Abierto", rom5_tag3:"Actualizaciones de Seguridad",
+  dev1_sub:"ROMs compiladas desde la fuente para este dispositivo", dev1_cnt:"2 ROMs",
+  dev2_sub:"ROMs compiladas desde la fuente para este dispositivo", dev2_cnt:"3 ROMs",
+  skills_small:"Capacidades Técnicas", skills_title:"⚡ Habilidades",
+  sk1:"Desarrollo de Apps", sk2:"Bases de Datos y Backend", sk3:"Redes y Sistemas", sk4:"Android Avanzado", sk5:"Datos y Multimedia", sk6:"Herramientas y Metodologías",
+  contact_small:"Hablemos", contact_title:"📬 Contáctame",
+  contact_desc:"Abierto a oportunidades laborales en soporte técnico, sistemas y desarrollo de aplicaciones.",
+  contact_email:"Correo electrónico", contact_phone:"Teléfono", contact_cv:"Descargar CV",
+  view_github:"Ver en GitHub →",
+  nav_tips:"Consejos Técnicos",
+  miqyas_sub:"Estudio de zona segura de iconos y maquetas de tiendas — Flutter",
+  miqyas_desc:"Estudio interactivo para alinear con precisión iconos en la zona segura 66×66 para todas las plataformas, con vista previa en maqueta de dispositivos y generador de capturas para Google Play y App Store.",
+  mufarrigh_sub:"Extractor de hojas de sprites y eliminador de fondos — Flutter",
+  mufarrigh_desc:"Herramienta inteligente de escritorio y móvil para extraer sprites y eliminar fondos con motor Pure-Dart, BFS Flood-Fill, separación de elementos contiguos, interfaz adaptativa de 3 paneles y exportación por lotes.",
+  tips_small:"Guías, consejos y soluciones",
+  tips_title:"💡 Consejos Técnicos",
+  tips_desc:"Guías prácticas, solución de errores y herramientas de automatización adquiridas durante el desarrollo y la administración de sistemas.",
+  tip1_badge:"Aviso y solución de compilación en Flutter",
+  tip1_title:"Uso correcto de la extensión Gradle for Java para evitar conflictos de versión",
+  tip1_desc:"Al habilitar la extensión <b>Gradle for Java</b> en el IDE, si tu proyecto <b>Flutter</b> contiene múltiples versiones de Gradle, la extensión intentará compilar cada una por separado, causando errores de incompatibilidad (como <code>Minimum supported Gradle version is 9.6.0. Current version is 9.4.0</code>). Se recomienda configurarla adecuadamente o deshabilitar el escaneo automático profundo en directorios de Flutter.",
+  tip2_badge:"Herramienta de automatización para Linux",
+  tip2_sub:"Herramienta de automatización para Linux — Bash + Arch Linux",
+  tip2_title:"Flutter Installer for Arch Linux — Instalación automatizada de Flutter SDK",
+  tip2_desc:"Script en Bash para automatizar la instalación de la versión estable más reciente de Flutter SDK en Arch Linux: descarga la versión oficial, configura variables de entorno para 3 shells (Bash, Zsh, Fish) y configura OpenJDK como predeterminado con <code>archlinux-java</code>.",
+  tip_img_tag:"📸 Captura de la extensión y error",
+  tip_vid_tag:"🎬 Video demostrativo",
+  footer:"Diseñado y desarrollado por <b>Hossam Hassan Majrashi</b> © 2026 — Todos los proyectos disponibles en GitHub"
+},
+fr:{
+  brand1:"Hossam", brand2:"Majrashi",
+  nav_about:"À propos", nav_exp:"Expérience", nav_projects:"Projets", nav_roms:"ROMs Android", nav_skills:"Compétences", nav_contact:"Contact",
+  badge:"Disponible — IT Support & Network",
+  name_ar:"Hossam Hassan Majrashi",
+  role:"Spécialiste Réseaux • Développeur Flutter & Electron • Support IT & Systèmes",
+  lead:"Je développe des solutions logicielles réelles utilisées quotidiennement en environnement professionnel : systèmes de gestion de tickets, outils de traitement de données (+715K enregistrements), applications de productivité et compilation complète de ROMs Android depuis les sources.",
+  cta_projects:"🚀 Voir mes projets",
+  cta_cv:"📄 Télécharger le CV",
+  stat1:"Projets logiciels publiés", stat2:"Enregistrements traités", stat3:"ROMs Android compilées depuis les sources", stat4:"Mois d'expérience terrain en support & systèmes",
+  exp_small:"Expérience Professionnelle", exp_title:"💼 Poste Actuel",
+  exp1_title:"Support IT / Assistant Systèmes",
+  exp1_co:"Société Almajarah",
+  exp1_period:"Février 2026 — Août 2026",
+  exp1_li1:"Conception et développement de <b>CaseDesk</b>, un système de gestion de tickets de support pour les succursales et employés — architecture Offline-First avec double base de données (Hive local + MySQL cloud via API REST PHP).",
+  exp1_li2:"Développement de l'application <b>IT Software Center</b> pour distribuer les logiciels approuvés sur le réseau de l'entreprise avec détection automatique des mises à jour et gestionnaire de téléchargement intelligent.",
+  exp1_li3:"Création de <b>RatilConvert</b>, qui a traité et nettoyé <b>+715 463 enregistrements clients</b> de Retail Pro et les a exportés avec une compatibilité 100% vers Odoo ERP — réduction de 95% du temps de migration manuelle.",
+  exp1_li4:"Conception du schéma réseau physique du bâtiment avec draw.io : répartition des serveurs, pare-feu, switch principal et switches de départements, avec documentation complète.",
+  exp1_li5:"Gestion de la maintenance et du matériel, analyse des KPIs via des tableaux de bord interactifs et génération de rapports PDF/Excel professionnels.",
+  exp1_intro:"Durant mon passage dans l'entreprise, j'ai développé des systèmes logiciels complets utilisés quotidiennement par les succursales et les employés : un système de gestion de tickets de support, une plateforme interne de distribution de logiciels et un outil de traitement et migration de données massives — ainsi que la conception et la documentation de l'infrastructure réseau et la gestion de la maintenance et du matériel.",
+  exp2_title:"Formation CCNA — Réseaux",
+  exp2_co:"Académie Tuwaiq",
+  exp2_period:"Certificat de formation",
+  exp2_li1:"Configuration de routeurs et switches Cisco à partir de zéro : Router-on-a-Stick, VLANs multiples et routage OSPF entre routeurs.",
+  exp2_li2:"Subnetting selon le nombre d'appareils (/26 et /27) et sécurisation des équipements (mots de passe chiffrés, bannières, fermeture des ports inutilisés).",
+  proj_small:"Portfolio", proj_title:"🛠️ Projets Logiciels",
+  proj_desc:"Projets réels terminés et publiés sur GitHub — des systèmes de gestion d'entreprise aux outils de productivité desktop et mobile.",
+  grp_company:"🏢 Projets de la société Almajarah", grp_company_cnt:"3 projets",
+  grp_personal:"👤 Projets personnels — Publiés sur GitHub", grp_personal_cnt:"8 projets",
+  casedesk_sub:"Système de gestion de tickets de support — Flutter Desktop",
+  casedesk_desc:"Système Help Desk complet pour succursales et employés : synchronisation Offline-First (Hive + MySQL), tableau de bord KPIs interactif, rapports PDF/Excel, remplissage automatique intelligent et notifications WhatsApp.",
+  ratil_sub:"Migration de données Retail Pro → Odoo ERP",
+  ratil_desc:"Traitement et nettoyage de <b>+715 463 enregistrements clients</b> avec des algorithmes intelligents et un traitement parallèle (Dart Isolates) sans figer l'interface — précision 100% et 95% de temps de migration en moins.",
+  itsc_sub:"Plateforme interne de distribution de logiciels",
+  itsc_desc:"Application d'entreprise pour distribuer les logiciels approuvés sur le réseau : gestionnaire de téléchargement avec progression en direct (Dio), détection automatique des mises à jour, support arabe/anglais et mode sombre (Material 3).",
+  tpc_sub:"Découpage vidéo — Electron.js + FFmpeg",
+  tpc_desc:"Application desktop pour découper des vidéos (1/2/3 minutes ou moitiés) en qualité 100% lossless via Stream Copy, détection automatique du GPU et interface Glassmorphism moderne. Fonctionne sur Windows, Linux et macOS.",
+  ts_sub:"Entraîneur de frappe — Electron.js",
+  ts_desc:"Entraîneur de frappe multiplateforme avec support RTL complet (arabe/hébreu/persan), statistiques WPM et précision détaillées, arrêt forcé en cas d'erreur, raccourcis globaux et barre système.",
+  nui_sub:"Launcher Android — Kotlin + Jetpack Compose",
+  nui_desc:"Launcher Android moderne avec architecture MVVM et Room DB : calendrier Hijri/Grégorien intégré, notes sur l'écran d'accueil, catégorisation automatique des apps, corbeille et masquage des apps sensibles.",
+  r30_sub:"Gestion de salaire et budget — Flutter",
+  r30_desc:"Application de budget intelligente Offline-First : répartition automatique 50/30/20, budget quotidien dynamique, défis d'épargne, section charité, graphiques (fl_chart) et calendrier financier mensuel — six plateformes.",
+  pomo_sub:"Minuteur Pomodoro — Flutter",
+  pomo_desc:"Gestion des sessions de travail et de pause avec la technique Pomodoro : objectifs quotidiens et hebdomadaires personnalisables, alertes sonores, thèmes multiples et paquets Linux (Flatpak / .desktop) — 5 plateformes.",
+  lm_sub:"Générateur de vidéos avec filigrane — Flutter + FFmpeg",
+  lm_desc:"Génère des vidéos MP4 avec filigrane texte animé sans vidéo d'entrée : texte arabe rendu avec Flutter Canvas en haute fidélité, exporté via FFmpeg sur Android et Windows.",
+  roms_small:"Systèmes d'Exploitation", roms_title:"🤖 Compilation de ROMs Android personnalisées depuis les sources",
+  roms_desc:"Compilation complète de ROMs AOSP depuis les sources avec réglage du kernel, device tree et gestion des vendor blobs.",
+  rom1_desc:"Compilation AOSP complète depuis les sources avec la couche Evolution X, kernel personnalisé et device tree, correctifs HAL et configuration caméra — expérience Pixel sur matériel Xiaomi.",
+  rom2_desc:"Compilation AOSP Android 16 depuis les sources avec les fonctionnalités Infinity X, réglage kernel et device tree, et gestion des vendor blobs et HAL.",
+  rom3_desc:"Compilation de PixelOS depuis les sources avec compilation du kernel, device tree et extraction des vendor blobs — expérience Pixel épurée sur matériel Motorola.",
+  rom4_desc:"Version Vanilla sans services Google (GApps) — expérience AOSP 100% pure sur le même appareil.",
+  rom4_tag3:"Sans GApps",
+  rom5_desc:"Maintenance et compilation de la ROM officielle LineageOS 23.2 pour le Moto G54 5G — ROM open source stable et légère avec mises à jour de sécurité régulières.",
+  rom5_tag2:"Open Source", rom5_tag3:"Mises à jour de sécurité",
+  dev1_sub:"ROMs compilées depuis les sources pour cet appareil", dev1_cnt:"2 ROMs",
+  dev2_sub:"ROMs compilées depuis les sources pour cet appareil", dev2_cnt:"3 ROMs",
+  skills_small:"Capacités Techniques", skills_title:"⚡ Compétences",
+  sk1:"Développement d'Apps", sk2:"Bases de Données & Backend", sk3:"Réseaux & Systèmes", sk4:"Android Avancé", sk5:"Données & Médias", sk6:"Outils & Méthodologies",
+  contact_small:"Discutons", contact_title:"📬 Contactez-moi",
+  contact_desc:"Ouvert aux opportunités en support IT, systèmes et développement d'applications.",
+  contact_email:"E-mail", contact_phone:"Téléphone", contact_cv:"Télécharger le CV",
+  view_github:"Voir sur GitHub →",
+  nav_tips:"Conseils Techniques",
+  miqyas_sub:"Studio de zone de sécurité d'icônes & maquettes de stores — Flutter",
+  miqyas_desc:"Studio interactif pour aligner précisément les icônes d'application dans la zone de sécurité 66×66 pour toutes les plateformes, avec aperçu sur simulateur d'appareils et générateur de captures pour Google Play et App Store.",
+  mufarrigh_sub:"Extracteur de feuilles de sprites & suppression d'arrière-plan — Flutter",
+  mufarrigh_desc:"Outil intelligent desktop et mobile pour découper des feuilles de sprites et supprimer les arrière-plans avec un moteur Pure-Dart, BFS Flood-Fill, lissage des contours, interface adaptative à 3 volets et export par lots.",
+  tips_small:"Guides, astuces & solutions",
+  tips_title:"💡 Conseils Techniques",
+  tips_desc:"Guides pratiques, résolution de bugs et outils d'automatisation acquis au fil du développement et de l'administration système.",
+  tip1_badge:"Avertissement et solution de build Flutter",
+  tip1_title:"Utilisation correcte de l'extension Gradle for Java pour éviter les conflits de versions",
+  tip1_desc:"Lors de l'activation de l'extension <b>Gradle for Java</b> dans l'IDE, si votre projet <b>Flutter</b> comporte plusieurs versions de Gradle, l'extension tentera de compiler chaque version séparément, provoquant des erreurs de compatibilité (ex. <code>Minimum supported Gradle version is 9.6.0. Current version is 9.4.0</code>). Il est recommandé d'ajuster sa portée ou de désactiver la détection récursive dans les sous-dossiers Flutter.",
+  tip2_badge:"Outil d'automatisation Linux",
+  tip2_sub:"Outil d'automatisation Linux — Bash + Arch Linux",
+  tip2_title:"Flutter Installer for Arch Linux — Installation automatisée du SDK Flutter",
+  tip2_desc:"Script Bash automatisant l'installation de la dernière version stable de Flutter SDK sur Arch Linux : récupération de la version officielle, configuration des variables d'environnement pour 3 shells (Bash, Zsh, Fish) et configuration d'OpenJDK par défaut via <code>archlinux-java</code>.",
+  tip_img_tag:"📸 Capture de l'extension et de l'erreur",
+  tip_vid_tag:"🎬 Vidéo de démonstration",
+  footer:"Conçu et développé par <b>Hossam Hassan Majrashi</b> © 2026 — Tous les projets disponibles sur GitHub"
+},
+it:{
+  brand1:"Hossam", brand2:"Majrashi",
+  nav_about:"Chi sono", nav_exp:"Esperienza", nav_projects:"Progetti", nav_roms:"ROM Android", nav_skills:"Competenze", nav_contact:"Contatti",
+  badge:"Disponibile — IT Support & Network",
+  name_ar:"Hossam Hassan Majrashi",
+  role:"Specialista di Reti • Sviluppatore Flutter & Electron • Supporto IT e Sistemi",
+  lead:"Sviluppo soluzioni software reali usate quotidianamente in ambienti di lavoro: sistemi di gestione ticket, strumenti di elaborazione dati (+715K record), app di produttività e compilazione completa di ROM Android dai sorgenti.",
+  cta_projects:"🚀 Vedi i miei progetti",
+  cta_cv:"📄 Scarica il CV",
+  stat1:"Progetti software pubblicati", stat2:"Record di dati elaborati", stat3:"ROM Android compilate dai sorgenti", stat4:"Mesi di esperienza sul campo in supporto e sistemi",
+  exp_small:"Esperienza Lavorativa", exp_title:"💼 Lavoro Attuale",
+  exp1_title:"Supporto IT / Assistente di Sistemi",
+  exp1_co:"Azienda Almajarah",
+  exp1_period:"Febbraio 2026 — Agosto 2026",
+  exp1_li1:"Progettato e sviluppato <b>CaseDesk</b>, un sistema di gestione ticket di supporto per filiali e dipendenti — architettura Offline-First con doppio database (Hive locale + MySQL cloud via API REST PHP).",
+  exp1_li2:"Sviluppato l'app <b>IT Software Center</b> per distribuire software approvato nella rete aziendale con rilevamento automatico degli aggiornamenti e un gestore di download intelligente.",
+  exp1_li3:"Creato <b>RatilConvert</b>, che ha elaborato e pulito <b>+715.463 record clienti</b> da Retail Pro esportandoli con compatibilità 100% verso Odoo ERP — riduzione del 95% del tempo di migrazione manuale.",
+  exp1_li4:"Progettato lo schema di rete fisica dell'edificio con draw.io: distribuzione server, firewall, core switch e switch di reparto, con documentazione completa.",
+  exp1_li5:"Gestite attività di manutenzione e hardware, analisi dei KPI tramite dashboard interattive e generazione di report PDF/Excel professionali.",
+  exp1_intro:"Durante il mio periodo in azienda, ho sviluppato sistemi software completi usati quotidianamente da filiali e dipendenti: un sistema di gestione dei ticket di supporto, una piattaforma interna di distribuzione software e uno strumento di elaborazione e migrazione di grandi volumi di dati — oltre alla progettazione e documentazione dell'infrastruttura di rete e alla gestione di manutenzione e hardware.",
+  exp2_title:"Formazione CCNA — Reti",
+  exp2_co:"Accademia Tuwaiq",
+  exp2_period:"Certificato di formazione",
+  exp2_li1:"Configurazione di router e switch Cisco da zero: Router-on-a-Stick, VLAN multiple e routing OSPF tra router.",
+  exp2_li2:"Subnetting in base al numero di dispositivi (/26 e /27) e hardening dei dispositivi (password crittografate, banner, chiusura porte inutilizzate).",
+  proj_small:"Portfolio", proj_title:"🛠️ Progetti Software",
+  proj_desc:"Progetti reali completati e pubblicati su GitHub — dai sistemi di gestione aziendale agli strumenti di produttività desktop e mobile.",
+  grp_company:"🏢 Progetti dell'azienda Almajarah", grp_company_cnt:"3 progetti",
+  grp_personal:"👤 Progetti personali — Pubblicati su GitHub", grp_personal_cnt:"8 progetti",
+  casedesk_sub:"Sistema di gestione ticket di supporto — Flutter Desktop",
+  casedesk_desc:"Sistema Help Desk completo per filiali e dipendenti: sincronizzazione Offline-First (Hive + MySQL), dashboard KPI interattiva, report PDF/Excel, compilazione automatica intelligente e notifiche WhatsApp.",
+  ratil_sub:"Migrazione dati Retail Pro → Odoo ERP",
+  ratil_desc:"Elaborazione e pulizia di <b>+715.463 record clienti</b> con algoritmi intelligenti ed elaborazione parallela (Dart Isolates) senza bloccare l'interfaccia — precisione 100% e 95% di tempo di migrazione in meno.",
+  itsc_sub:"Piattaforma interna di distribuzione software",
+  itsc_desc:"App aziendale per distribuire software approvato nella rete: gestore download con progresso live (Dio), rilevamento automatico aggiornamenti, supporto arabo/inglese e modalità scura (Material 3).",
+  tpc_sub:"Divisione video — Electron.js + FFmpeg",
+  tpc_desc:"App desktop per dividere video (1/2/3 minuti o metà) in qualità 100% lossless via Stream Copy, rilevamento automatico GPU e interfaccia Glassmorphism moderna. Funziona su Windows, Linux e macOS.",
+  ts_sub:"Trainer di digitazione — Electron.js",
+  ts_desc:"Trainer di digitazione multipiattaforma con supporto RTL completo (arabo/ebraico/persiano), statistiche WPM e accuratezza dettagliate, stop forzato in caso di errore, scorciatoie globali e system tray.",
+  nui_sub:"Launcher Android — Kotlin + Jetpack Compose",
+  nui_desc:"Launcher Android moderno con architettura MVVM e Room DB: calendario Hijri/Gregoriano integrato, note sulla home, categorizzazione automatica delle app, cestino e nascondimento app sensibili.",
+  r30_sub:"Gestione stipendio e budget — Flutter",
+  r30_desc:"App di budget intelligente Offline-First: distribuzione automatica 50/30/20, budget giornaliero dinamico, sfide di risparmio, sezione beneficenza, grafici (fl_chart) e calendario finanziario mensile — sei piattaforme.",
+  pomo_sub:"Timer Pomodoro — Flutter",
+  pomo_desc:"Gestione sessioni di lavoro e pausa con la tecnica Pomodoro: obiettivi giornalieri e settimanali personalizzabili, avvisi sonori, temi multipli e pacchetti Linux (Flatpak / .desktop) — 5 piattaforme.",
+  lm_sub:"Generatore di video con watermark — Flutter + FFmpeg",
+  lm_desc:"Genera video MP4 con watermark di testo animato senza video di input: testo arabo renderizzato con Flutter Canvas in alta fedeltà, esportato via FFmpeg su Android e Windows.",
+  roms_small:"Sistemi Operativi", roms_title:"🤖 Compilazione di ROM Android personalizzate dai sorgenti",
+  roms_desc:"Compilazione completa di ROM AOSP dai sorgenti con ottimizzazione del kernel, device tree e gestione dei vendor blob.",
+  rom1_desc:"Compilazione AOSP completa dai sorgenti con il layer Evolution X, kernel personalizzato e device tree, fix HAL e configurazione fotocamera — esperienza Pixel su hardware Xiaomi.",
+  rom2_desc:"Compilazione AOSP Android 16 dai sorgenti con funzionalità Infinity X, ottimizzazione kernel e device tree, e gestione di vendor blob e HAL.",
+  rom3_desc:"Compilazione di PixelOS dai sorgenti con compilazione del kernel, device tree ed estrazione dei vendor blob — esperienza Pixel pulita su hardware Motorola.",
+  rom4_desc:"Versione Vanilla senza servizi Google (GApps) — esperienza AOSP 100% pura sullo stesso dispositivo.",
+  rom4_tag3:"Senza GApps",
+  rom5_desc:"Manutenzione e compilazione della ROM ufficiale LineageOS 23.2 per Moto G54 5G — ROM open source stabile e leggera con aggiornamenti di sicurezza regolari.",
+  rom5_tag2:"Open Source", rom5_tag3:"Aggiornamenti di Sicurezza",
+  dev1_sub:"ROM compilate dai sorgenti per questo dispositivo", dev1_cnt:"2 ROM",
+  dev2_sub:"ROM compilate dai sorgenti per questo dispositivo", dev2_cnt:"3 ROM",
+  skills_small:"Capacità Tecniche", skills_title:"⚡ Competenze",
+  sk1:"Sviluppo App", sk2:"Database e Backend", sk3:"Reti e Sistemi", sk4:"Android Avanzato", sk5:"Dati e Media", sk6:"Strumenti e Metodologie",
+  contact_small:"Parliamone", contact_title:"📬 Contattami",
+  contact_desc:"Aperto a opportunità di lavoro in supporto IT, sistemi e sviluppo di applicazioni.",
+  contact_email:"Email", contact_phone:"Telefono", contact_cv:"Scarica il CV",
+  view_github:"Vedi su GitHub →",
+  nav_tips:"Consigli Tecnici",
+  miqyas_sub:"Studio safe-zone per icone e mockup store — Flutter",
+  miqyas_desc:"Studio interattivo per centrare le icone nella safe-zone 66×66 per tutte le piattaforme, con anteprima dinamica su mockup di dispositivi e generatore automatico di screenshot promozionali per Google Play e App Store.",
+  mufarrigh_sub:"Estrattore sprite sheet e rimozione sfondo — Flutter",
+  mufarrigh_desc:"Strumento desktop e mobile per ritagliare sprite sheet e rimuovere sfondi con motore Pure-Dart, algoritmi BFS Flood-Fill e gap erosion, interfaccia adattiva a 3 pannelli ed esportazione in batch.",
+  tips_small:"Guide, approfondimenti e soluzioni",
+  tips_title:"💡 Consigli Tecnici",
+  tips_desc:"Guide pratiche, soluzioni ai problemi e strumenti di automazione acquisiti durante lo sviluppo e l'amministrazione dei sistemi.",
+  tip1_badge:"Avviso e correzione build Flutter",
+  tip1_title:"Uso corretto dell'estensione Gradle for Java per evitare conflitti di versione",
+  tip1_desc:"Abilitando l'estensione <b>Gradle for Java</b> nell'IDE, se il progetto <b>Flutter</b> include più versioni di Gradle, l'estensione tenterà di compilare ciascuna separatamente, generando errori di incompatibilità (es. <code>Minimum supported Gradle version is 9.6.0. Current version is 9.4.0</code>). Si consiglia di limitarne l'ambito o disattivare il rilevamento automatico nelle sottocartelle Flutter.",
+  tip2_badge:"Strumento di automazione Linux",
+  tip2_sub:"Strumento di automazione Linux — Bash + Arch Linux",
+  tip2_title:"Flutter Installer for Arch Linux — Installazione automatizzata di Flutter SDK",
+  tip2_desc:"Script Bash per automatizzare l'installazione dell'ultima versione stabile di Flutter SDK su Arch Linux: scarica la versione ufficiale, imposta le variabili d'ambiente per 3 shell (Bash, Zsh, Fish) e imposta OpenJDK predefinito tramite <code>archlinux-java</code>.",
+  tip_img_tag:"📸 Screenshot estensione ed errore",
+  tip_vid_tag:"🎬 Video dimostrativo",
+  footer:"Progettato e sviluppato da <b>Hossam Hassan Majrashi</b> © 2026 — Tutti i progetti disponibili su GitHub"
+},
+tr:{
+  brand1:"Hossam", brand2:"Majrashi",
+  nav_about:"Hakkımda", nav_exp:"Deneyim", nav_projects:"Projeler", nav_roms:"Android ROM'ları", nav_skills:"Yetenekler", nav_contact:"İletişim",
+  badge:"İş fırsatlarına açığım — IT Support & Network",
+  name_ar:"Hossam Hassan Majrashi",
+  role:"Ağ Uzmanı • Flutter & Electron Uygulama Geliştiricisi • IT Destek ve Sistemler",
+  lead:"İş ortamlarında günlük kullanılan gerçek yazılım çözümleri geliştiriyorum: talep yönetim sistemleri, büyük veri işleme araçları (+715K kayıt), üretkenlik uygulamaları ve kaynaktan tam Android ROM derlemeleri.",
+  cta_projects:"🚀 Projelerimi gör",
+  cta_cv:"📄 CV'yi İndir",
+  stat1:"Yayınlanmış yazılım projeleri", stat2:"İşlenen veri kaydı", stat3:"Kaynaktan derlenen Android ROM'u", stat4:"Destek ve sistemlerde saha deneyimi (ay)",
+  exp_small:"İş Deneyimi", exp_title:"💼 Mevcut İş",
+  exp1_title:"IT Destek / Sistem Asistanı",
+  exp1_co:"Almajarah Şirketi",
+  exp1_period:"Şubat 2026 — Ağustos 2026",
+  exp1_li1:"Şubeler ve çalışanlar için destek talebi yönetim sistemi <b>CaseDesk</b>'i tasarladım ve geliştirdim — çift veritabanlı Offline-First mimari (yerel Hive + PHP REST API üzerinden bulut MySQL).",
+  exp1_li2:"Şirket ağında onaylı yazılımları dağıtmak için otomatik güncelleme algılama ve akıllı indirme yöneticisi içeren <b>IT Software Center</b> uygulamasını geliştirdim.",
+  exp1_li3:"Retail Pro'dan <b>+715.463 müşteri kaydını</b> işleyip temizleyen ve %100 uyumlulukla Odoo ERP'ye aktaran <b>RatilConvert</b> aracını geliştirdim — manuel geçiş süresini %95 azalttı.",
+  exp1_li4:"draw.io ile şirket binasının fiziksel ağ şemasını tasarladım: sunucu dağılımı, güvenlik duvarı, çekirdek switch ve departman switch'leri, tam ağ dokümantasyonu ile.",
+  exp1_li5:"Bakım ve donanım görevlerini yürüttüm, etkileşimli panolarla KPI'ları analiz ettim ve profesyonel PDF/Excel raporları ürettim.",
+  exp1_intro:"Şirketteki görev sürem boyunca, şubeler ve çalışanlar tarafından günlük kullanılan eksiksiz yazılım sistemleri geliştirdim: destek talebi yönetim sistemi, kurum içi yazılım dağıtım platformu ve büyük veri işleme & taşıma aracı — ayrıca ağ altyapısının tasarlanması ve belgelenmesi ile bakım ve donanım görevleri.",
+  exp2_title:"CCNA Eğitimi — Ağlar",
+  exp2_co:"Tuwaiq Akademisi",
+  exp2_period:"Eğitim Sertifikası",
+  exp2_li1:"Cisco router ve switch'leri sıfırdan yapılandırdım: Router-on-a-Stick, çoklu VLAN'lar ve router'lar arası OSPF yönlendirme.",
+  exp2_li2:"Cihaz sayısına göre subnetting (/26 ve /27) ve cihaz güvenliği (şifreli parolalar, banner, kullanılmayan portların kapatılması).",
+  proj_small:"Portföy", proj_title:"🛠️ Yazılım Projeleri",
+  proj_desc:"GitHub'da yayınlanmış gerçek ve tamamlanmış projeler — kurumsal yönetim sistemlerinden masaüstü ve mobil üretkenlik araçlarına.",
+  grp_company:"🏢 Almajarah Şirketi Projeleri", grp_company_cnt:"3 proje",
+  grp_personal:"👤 Kişisel Projeler — GitHub'da Yayınlandı", grp_personal_cnt:"8 proje",
+  casedesk_sub:"IT destek talebi yönetim sistemi — Flutter Desktop",
+  casedesk_desc:"Şubeler ve çalışanlar için eksiksiz Help Desk sistemi: Offline-First senkronizasyon (Hive + MySQL), etkileşimli KPI panosu, PDF/Excel raporları, akıllı otomatik doldurma ve WhatsApp bildirimleri.",
+  ratil_sub:"Retail Pro → Odoo ERP veri geçişi",
+  ratil_desc:"Akıllı temizleme algoritmaları ve paralel işlem (Dart Isolates) ile arayüzü dondurmadan <b>+715.463 müşteri kaydını</b> işledim ve temizledim — %100 doğruluk ve %95 daha az manuel geçiş süresi.",
+  itsc_sub:"Kurumlar için dahili yazılım dağıtım platformu",
+  itsc_desc:"Şirket ağında onaylı yazılımları dağıtan kurumsal uygulama: canlı ilerleme göstergeli indirme yöneticisi (Dio), otomatik güncelleme algılama, Arapça/İngilizce desteği ve karanlık mod (Material 3).",
+  tpc_sub:"Video bölme — Electron.js + FFmpeg",
+  tpc_desc:"Videoları (1/2/3 dakika veya yarılar) Stream Copy ile %100 kayıpsız kalitede bölen masaüstü uygulaması; otomatik GPU algılama ve modern Glassmorphism arayüzü. Windows, Linux ve macOS'ta çalışır.",
+  ts_sub:"Yazma hızı eğitmeni — Electron.js",
+  ts_desc:"Tam RTL desteği (Arapça/İbranice/Farsça), detaylı WPM ve doğruluk istatistikleri, hatada zorunlu durma, genel kısayollar ve sistem tepsisi içeren platformlar arası yazma eğitmeni.",
+  nui_sub:"Android başlatıcı — Kotlin + Jetpack Compose",
+  nui_desc:"MVVM mimarisi ve Room DB ile modern Android başlatıcı: entegre Hicri/Miladi takvim, ana ekran notları, otomatik uygulama kategorilendirme, çöp kutusu ve hassas uygulamaları gizleme.",
+  r30_sub:"Maaş ve bütçe yönetimi — Flutter",
+  r30_desc:"Akıllı Offline-First bütçe uygulaması: otomatik 50/30/20 dağılımı, dinamik günlük bütçe, tasarruf meydan okumaları, sadaka bölümü, grafikler (fl_chart) ve aylık finansal takvim — altı platform.",
+  pomo_sub:"Pomodoro üretkenlik zamanlayıcısı — Flutter",
+  pomo_desc:"Pomodoro tekniğiyle çalışma/mola seansı yönetimi: özelleştirilebilir günlük ve haftalık hedefler, sesli uyarılar, çoklu temalar ve Linux paketleri (Flatpak / .desktop) — 5 platform.",
+  lm_sub:"Filigran video oluşturucu — Flutter + FFmpeg",
+  lm_desc:"Girdi videosu olmadan animasyonlu metin filigranlı MP4 videolar üretir: Arapça metin Flutter Canvas motoruyla yüksek doğrulukta işlenir, Android ve Windows'ta FFmpeg ile dışa aktarılır.",
+  roms_small:"İşletim Sistemleri", roms_title:"🤖 Kaynaktan Özel Android ROM Derleme",
+  roms_desc:"Kernel ayarı, device tree kurulumu ve vendor blob yönetimi ile kaynaktan tam AOSP ROM derlemeleri.",
+  rom1_desc:"Evolution X katmanıyla kaynaktan tam AOSP derlemesi, özel kernel ayarı ve device tree, HAL düzeltmeleri ve kamera kurulumu — Xiaomi donanımında Pixel deneyimi.",
+  rom2_desc:"Infinity X özellikleriyle kaynaktan AOSP Android 16 derlemesi, kernel ve device tree ayarı, vendor blob ve HAL yönetimi.",
+  rom3_desc:"Kernel derlemesi, device tree kurulumu ve vendor blob çıkarımı ile kaynaktan PixelOS derlemesi — Motorola donanımında temiz Pixel deneyimi.",
+  rom4_desc:"Google servisleri (GApps) olmadan Vanilla sürümü — aynı cihazda %100 saf AOSP deneyimi.",
+  rom4_tag3:"GApps'siz",
+  rom5_desc:"Moto G54 5G için resmi LineageOS 23.2 ROM'unun bakımı ve derlemesi — düzenli güvenlik güncellemeleriyle kararlı ve hafif açık kaynak ROM.",
+  rom5_tag2:"Açık Kaynak", rom5_tag3:"Güvenlik Güncellemeleri",
+  dev1_sub:"Bu cihaz için kaynaktan derlenen ROM'lar", dev1_cnt:"2 ROM",
+  dev2_sub:"Bu cihaz için kaynaktan derlenen ROM'lar", dev2_cnt:"3 ROM",
+  skills_small:"Teknik Yetkinlikler", skills_title:"⚡ Yetenekler",
+  sk1:"Uygulama Geliştirme", sk2:"Veritabanları ve Backend", sk3:"Ağlar ve Sistemler", sk4:"İleri Android", sk5:"Veri ve Medya", sk6:"Araçlar ve Metodolojiler",
+  contact_small:"Konuşalım", contact_title:"📬 Bana Ulaşın",
+  contact_desc:"IT destek, sistemler ve uygulama geliştirme alanlarında iş fırsatlarına açığım.",
+  contact_email:"E-posta", contact_phone:"Telefon", contact_cv:"CV'yi İndir",
+  view_github:"GitHub'da Gör →",
+  nav_tips:"Teknik İpuçları",
+  miqyas_sub:"Uygulama simgesi güvenli alan stüdyosu ve mağaza şablonları — Flutter",
+  miqyas_desc:"Uygulama simgelerini tüm platformlar için 66×66 güvenli alana hizalayan, cihaz maketi üzerinde canlı önizleme sunan ve Google Play ile App Store için tanıtım görselleri üreten etkileşimli stüdyo.",
+  mufarrigh_sub:"Sprite sayfası çıkarıcı ve arka plan temizleyici — Flutter",
+  mufarrigh_desc:"Pure-Dart motoru, BFS Flood-Fill ve gap erosion algoritmalarıyla 2D oyun sprite sayfalarını kesen ve arka planları temizleyen masaüstü ve mobil araç; uyarlanabilir 3 panelli arayüz ve toplu dışa aktarma.",
+  tips_small:"Rehberler, ipuçları ve çözümler",
+  tips_title:"💡 Teknik İpuçları",
+  tips_desc:"Geliştirme ve sistem yönetimi süreçlerinde edinilen pratik kılavuzlar, hata çözümleri ve otomasyon araçları.",
+  tip1_badge:"Flutter Derleme Uyarısı ve Çözümü",
+  tip1_title:"Sürüm çakışmalarını önlemek için Gradle for Java eklentisinin doğru kullanımı",
+  tip1_desc:"IDE'de <b>Gradle for Java</b> eklentisini etkinleştirdiğinizde, <b>Flutter</b> projenizde birden fazla Gradle sürümü varsa, eklenti her birini ayrı ayrı derlemeye çalışır ve uyumsuzluk hatalarına yol açar (ör. <code>Minimum supported Gradle version is 9.6.0. Current version is 9.4.0</code>). Eklentiyi doğru yapılandırmak veya Flutter alt dizinleri için otomatik derin taramayı kapatmak önerilir.",
+  tip2_badge:"Linux Otomasyon Aracı",
+  tip2_sub:"Linux otomasyon aracı — Bash + Arch Linux",
+  tip2_title:"Flutter Installer for Arch Linux — Otomatik Flutter SDK Kurulumu",
+  tip2_desc:"Arch Linux sistemlerinde en son kararlı Flutter SDK'nın kurulumunu otomatikleştiren Bash betiği: resmi kaynaktan son sürümü çeker, 3 kabuk (Bash, Zsh, Fish) için ortam değişkenlerini ayarlar ve <code>archlinux-java</code> ile varsayılan OpenJDK'yı kurar.",
+  tip_img_tag:"📸 Eklenti ve Hata Ekran Görüntüsü",
+  tip_vid_tag:"🎬 Tanıtım Videosu",
+  footer:"<b>Hossam Hassan Majrashi</b> tarafından tasarlandı ve geliştirildi © 2026 — Tüm projeler GitHub'da mevcut"
+},
+id:{
+  brand1:"Hossam", brand2:"Majrashi",
+  nav_about:"Tentang", nav_exp:"Pengalaman", nav_projects:"Proyek", nav_roms:"ROM Android", nav_skills:"Keahlian", nav_contact:"Kontak",
+  badge:"Terbuka untuk peluang kerja — IT Support & Network",
+  name_ar:"Hossam Hassan Majrashi",
+  role:"Spesialis Jaringan • Pengembang Aplikasi Flutter & Electron • Dukungan IT & Sistem",
+  lead:"Saya membangun solusi perangkat lunak nyata yang digunakan setiap hari di lingkungan kerja: sistem manajemen tiket, alat pemrosesan data besar (+715K rekaman), aplikasi produktivitas, dan kompilasi ROM Android lengkap dari sumber.",
+  cta_projects:"🚀 Lihat proyek saya",
+  cta_cv:"📄 Unduh CV",
+  stat1:"Proyek perangkat lunak yang diterbitkan", stat2:"Rekaman data yang diproses", stat3:"ROM Android yang dikompilasi dari sumber", stat4:"Bulan pengalaman lapangan di dukungan & sistem",
+  exp_small:"Pengalaman Kerja", exp_title:"💼 Pekerjaan Saat Ini",
+  exp1_title:"Dukungan IT / Asisten Sistem",
+  exp1_co:"Perusahaan Almajarah",
+  exp1_period:"Februari 2026 — Agustus 2026",
+  exp1_li1:"Merancang dan mengembangkan <b>CaseDesk</b>, sistem manajemen tiket dukungan untuk cabang dan karyawan — arsitektur Offline-First dengan dua database (Hive lokal + MySQL cloud via PHP REST API).",
+  exp1_li2:"Mengembangkan aplikasi <b>IT Software Center</b> untuk mendistribusikan perangkat lunak resmi di jaringan perusahaan dengan deteksi pembaruan otomatis dan manajer unduhan pintar.",
+  exp1_li3:"Membangun <b>RatilConvert</b>, yang memproses dan membersihkan <b>+715.463 rekaman pelanggan</b> dari Retail Pro dan mengekspornya dengan kompatibilitas 100% ke Odoo ERP — mengurangi waktu migrasi manual hingga 95%.",
+  exp1_li4:"Merancang diagram jaringan fisik gedung perusahaan dengan draw.io: distribusi server, firewall, core switch, dan switch departemen, dengan dokumentasi jaringan lengkap.",
+  exp1_li5:"Menangani tugas pemeliharaan dan perangkat keras, menganalisis KPI melalui dasbor interaktif, dan menghasilkan laporan PDF/Excel profesional.",
+  exp1_intro:"Selama bekerja di perusahaan, saya mengembangkan sistem perangkat lunak lengkap yang digunakan setiap hari oleh cabang dan karyawan: sistem manajemen tiket dukungan, platform distribusi perangkat lunak internal, dan alat pemrosesan & migrasi data besar — serta merancang dan mendokumentasikan infrastruktur jaringan dan menangani tugas pemeliharaan & perangkat keras.",
+  exp2_title:"Pelatihan CCNA — Jaringan",
+  exp2_co:"Akademi Tuwaiq",
+  exp2_period:"Sertifikat Pelatihan",
+  exp2_li1:"Mengonfigurasi router dan switch Cisco dari nol: Router-on-a-Stick, beberapa VLAN, dan routing OSPF antar router.",
+  exp2_li2:"Subnetting berdasarkan jumlah perangkat (/26 dan /27), dan pengamanan perangkat (kata sandi terenkripsi, banner, menutup port yang tidak digunakan).",
+  proj_small:"Portofolio", proj_title:"🛠️ Proyek Perangkat Lunak",
+  proj_desc:"Proyek nyata yang selesai dan diterbitkan di GitHub — dari sistem manajemen perusahaan hingga alat produktivitas desktop dan mobile.",
+  grp_company:"🏢 Proyek Perusahaan Almajarah", grp_company_cnt:"3 proyek",
+  grp_personal:"👤 Proyek Pribadi — Diterbitkan di GitHub", grp_personal_cnt:"8 proyek",
+  casedesk_sub:"Sistem manajemen tiket dukungan IT — Flutter Desktop",
+  casedesk_desc:"Sistem Help Desk lengkap untuk cabang dan karyawan: sinkronisasi Offline-First (Hive + MySQL), dasbor KPI interaktif, laporan PDF/Excel, pengisian otomatis pintar, dan notifikasi WhatsApp.",
+  ratil_sub:"Migrasi data Retail Pro → Odoo ERP",
+  ratil_desc:"Memproses dan membersihkan <b>+715.463 rekaman pelanggan</b> dengan algoritma pembersihan pintar dan pemrosesan paralel (Dart Isolates) tanpa membekukan UI — akurasi 100% dan 95% lebih sedikit waktu migrasi manual.",
+  itsc_sub:"Platform distribusi perangkat lunak internal",
+  itsc_desc:"Aplikasi perusahaan untuk mendistribusikan perangkat lunak resmi di jaringan: manajer unduhan dengan progres langsung (Dio), deteksi pembaruan otomatis, dukungan Arab/Inggris dan mode gelap (Material 3).",
+  tpc_sub:"Pembagian video — Electron.js + FFmpeg",
+  tpc_desc:"Aplikasi desktop untuk membagi video (1/2/3 menit atau setengah) dengan kualitas 100% lossless via Stream Copy, deteksi GPU otomatis, dan antarmuka Glassmorphism modern. Berjalan di Windows, Linux, dan macOS.",
+  ts_sub:"Pelatih kecepatan mengetik — Electron.js",
+  ts_desc:"Pelatih mengetik lintas platform dengan dukungan RTL penuh (Arab/Ibrani/Persia), statistik WPM dan akurasi terperinci, berhenti paksa saat kesalahan, pintasan global, dan system tray.",
+  nui_sub:"Launcher Android — Kotlin + Jetpack Compose",
+  nui_desc:"Launcher Android modern dengan arsitektur MVVM dan Room DB: kalender Hijriah/Masehi terintegrasi, catatan di layar utama, kategorisasi aplikasi otomatis, tempat sampah, dan menyembunyikan aplikasi sensitif.",
+  r30_sub:"Manajemen gaji & anggaran — Flutter",
+  r30_desc:"Aplikasi anggaran pintar Offline-First: distribusi otomatis 50/30/20, anggaran harian dinamis, tantangan menabung, bagian sedekah, grafik (fl_chart), dan kalender keuangan bulanan — enam platform.",
+  pomo_sub:"Timer produktivitas Pomodoro — Flutter",
+  pomo_desc:"Manajemen sesi kerja/istirahat dengan teknik Pomodoro: target harian dan mingguan yang dapat disesuaikan, peringatan suara, berbagai tema, dan paket Linux (Flatpak / .desktop) — 5 platform.",
+  lm_sub:"Generator video watermark — Flutter + FFmpeg",
+  lm_desc:"Menghasilkan video MP4 dengan watermark teks animasi tanpa video input: teks Arab dirender dengan mesin Flutter Canvas dalam fidelitas tinggi, diekspor via FFmpeg di Android dan Windows.",
+  roms_small:"Sistem Operasi", roms_title:"🤖 Kompilasi ROM Android Kustom dari Sumber",
+  roms_desc:"Kompilasi ROM AOSP lengkap dari sumber dengan penyetelan kernel, device tree, dan manajemen vendor blob.",
+  rom1_desc:"Kompilasi AOSP lengkap dari sumber dengan lapisan Evolution X, penyetelan kernel kustom dan device tree, perbaikan HAL dan pengaturan kamera — pengalaman Pixel di perangkat keras Xiaomi.",
+  rom2_desc:"Kompilasi AOSP Android 16 dari sumber dengan fitur Infinity X, penyetelan kernel dan device tree, serta manajemen vendor blob dan HAL.",
+  rom3_desc:"Kompilasi PixelOS dari sumber dengan kompilasi kernel, pengaturan device tree, dan ekstraksi vendor blob — pengalaman Pixel bersih di perangkat keras Motorola.",
+  rom4_desc:"Versi Vanilla tanpa layanan Google (GApps) — pengalaman AOSP 100% murni di perangkat yang sama.",
+  rom4_tag3:"Tanpa GApps",
+  rom5_desc:"Memelihara dan mengompilasi ROM resmi LineageOS 23.2 untuk Moto G54 5G — ROM open source yang stabil dan ringan dengan pembaruan keamanan berkala.",
+  rom5_tag2:"Sumber Terbuka", rom5_tag3:"Pembaruan Keamanan",
+  dev1_sub:"ROM yang dibangun dari sumber untuk perangkat ini", dev1_cnt:"2 ROM",
+  dev2_sub:"ROM yang dibangun dari sumber untuk perangkat ini", dev2_cnt:"3 ROM",
+  skills_small:"Kemampuan Teknis", skills_title:"⚡ Keahlian",
+  sk1:"Pengembangan Aplikasi", sk2:"Database & Backend", sk3:"Jaringan & Sistem", sk4:"Android Lanjutan", sk5:"Data & Media", sk6:"Alat & Metodologi",
+  contact_small:"Mari bicara", contact_title:"📬 Hubungi Saya",
+  contact_desc:"Terbuka untuk peluang kerja di dukungan IT, sistem, dan pengembangan aplikasi.",
+  contact_email:"Email", contact_phone:"Telepon", contact_cv:"Unduh CV",
+  view_github:"Lihat di GitHub →",
+  nav_tips:"Tips Teknis",
+  miqyas_sub:"Studio safe-zone ikon aplikasi & mockup store — Flutter",
+  miqyas_desc:"Studio interaktif untuk menyelaraskan ikon aplikasi dalam safe-zone 66×66 untuk semua platform, dengan pratinjau langsung mockup perangkat dan pembuat tangkapan layar toko untuk Google Play dan App Store.",
+  mufarrigh_sub:"Pengekstrak sprite sheet & penghapus latar belakang — Flutter",
+  mufarrigh_desc:"Alat cerdas desktop & seluler untuk mengekstrak sprite dan menghapus latar belakang dengan mesin Pure-Dart, BFS Flood-Fill, gap erosion, tata letak 3-panel adaptif, dan ekspor massal.",
+  tips_small:"Panduan, wawasan & solusi",
+  tips_title:"💡 Tips Teknis",
+  tips_desc:"Panduan praktis, solusi masalah, dan alat otomatisasi yang diperoleh selama pengembangan dan administrasi sistem.",
+  tip1_badge:"Peringatan & Solusi Build Flutter",
+  tip1_title:"Penggunaan tepat ekstensi Gradle for Java untuk mencegah konflik versi",
+  tip1_desc:"Saat mengaktifkan ekstensi <b>Gradle for Java</b> di IDE, jika proyek <b>Flutter</b> Anda memiliki beberapa versi Gradle, ekstensi akan mencoba membangun setiap versi secara terpisah, menyebabkan galat ketidakcocokan (seperti <code>Minimum supported Gradle version is 9.6.0. Current version is 9.4.0</code>). Disarankan untuk mengatur cakupannya atau menonaktifkan pemindaian otomatis di subdirektori Flutter.",
+  tip2_badge:"Alat Otomatisasi Linux",
+  tip2_sub:"Alat otomatisasi Linux — Bash + Arch Linux",
+  tip2_title:"Flutter Installer for Arch Linux — Pengaturan Otomatis Flutter SDK",
+  tip2_desc:"Skrip Bash untuk mengotomatiskan penginstalan Flutter SDK stabil terbaru di Arch Linux: mengunduh rilis resmi, mengonfigurasi variabel lingkungan untuk 3 shell (Bash, Zsh, Fish), dan menyetel OpenJDK default via <code>archlinux-java</code>.",
+  tip_img_tag:"📸 Tangkapan Layar Ekstensi & Galat",
+  tip_vid_tag:"🎬 Video Demonstrasi",
+  footer:"Dirancang dan dikembangkan oleh <b>Hossam Hassan Majrashi</b> © 2026 — Semua proyek tersedia di GitHub"
+}
+};
+
+function setLang(l){
+  const isAr = (l==='ar');
+  const d = isAr ? AR : T[l];
+  if(!d) return;
+  document.documentElement.lang = l;
+  document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.dataset.i18n;
+    if(d[k] !== undefined) el.innerHTML = d[k];
+  });
+  localStorage.setItem('cv-lang', l);
+}
+const sel = document.getElementById('langSel');
+sel.addEventListener('change', e=>setLang(e.target.value));
+const saved = localStorage.getItem('cv-lang');
+if(saved && saved!=='ar' && T[saved]){ sel.value = saved; setLang(saved); }
+</script>
+</body>
+</html>
