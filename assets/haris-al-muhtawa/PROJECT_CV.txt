@@ -1,0 +1,110 @@
+================================================================================
+                    حارس المحتوى | Haris Al-Muhtawa
+        ملف تعريفي جاهز للاستخدام في السيرة الذاتية والموقع الشخصي (Portfolio)
+================================================================================
+
+هذا الملف يحتوي على نصوص جاهزة بأساليب وصيغ متعددة (باللغتين العربية والإنجليزية)
+تناسب بطاقات المشاريع، الصفحات التفصيلية، ونقاط الـ Resume / CV المباشرة.
+
+--------------------------------------------------------------------------------
+[1] القسم العربي (Arabic Section)
+--------------------------------------------------------------------------------
+
+🔹 نبذة مختصرة جداً (One-Liner / Project Card - لبطاقة المشروع):
+إضافة متصفح تفاعلية ومفتوحة المصدر مصممة لتصفية محتوى يوتيوب، حظر التشتيت، واستعادة التحكم في المحتوى المعروض بخصوصية تامة وبدون خوادم وسيطة.
+
+---
+
+🔹 نبذة متوسطة (Elevator Pitch / Modal Summary):
+"حارس المحتوى" هي إضافة متصفح حديثة مطورة باستخدام TypeScript و WXT Framework، تمنح المستخدم تحكماً كاملاً في تغذية يوتيوب عبر نظام "القائمة المعتمدة" وحظر القنوات والمقاطع القصيرة (Shorts) وإيقاف الترجمة الإجبارية للعناوين. صُممت الإضافة وفق مبدأ الخصوصية أولاً (Local-First) وتعمل محلياً بالكامل مع دعم لأكثر من 40 لغة وأداء عالي على متصفحات Chromium و Firefox.
+
+---
+
+🔹 الوصف المفصل (Full Description - لصفحة المشروع التفصيلية):
+مشروع "حارس المحتوى" هو أداة متطورة مصممة لمساعدة صناع المحتوى والطلاب والمهنيين على استغلال يوتيوب كمنصة تعليمية دون الوقوع في فخ خوارزميات التشتيت والمحتوى غير اللائق. تقوم الإضافة بإعادة هيكلة وتصفية واجهة يوتيوب ديناميكياً وفورياً، حيث تعتمد على:
+
+1. نظام القوائم البيضاء (Whitelist): عرض مقاطع القنوات المعتمدة والموثوقة فقط.
+2. حظر بلمسة واحدة (Channel Blocker): حجب تام للقنوات غير المرغوبة من الصفحة الرئيسية ونتائج البحث.
+3. مجلدات تنظيمية ذكية: تصنيف الفيديوهات والقنوات حسب الاهتمامات (برمجة، تصاميم، بودكاست، علوم).
+4. استئصال مقاطع Shorts: إخفاء عناصر Shorts بالكامل لمنع التمرير اللانهائي.
+5. تعطيل الترجمة التلقائية: استرجاع العناوين الأصلية للفيديوهات دون تشويه خوارزميات الترجمة.
+6. خلاصة إشعارات هادئة: تتبع جديد القنوات المفضلة محلياً بدون إزعاج الإشعارات المستمرة.
+7. أمان وخصوصية 100%: تخزين محلي كامل (Chrome/Browser Local Storage) بدون أي خوادم خارجية أو تتبع أو إعلانات.
+8. واجهة عالمية: تدعم أكثر من 40 لغة مع دعم كامل للاتجاهين (RTL / LTR).
+
+---
+
+🔹 نقاط الإنجاز للسيرة الذاتية (Bullet Points for Resume / CV):
+- طوّرت إضافة متصفح مفتوحة المصدر (Cross-browser Extension) متوافقة مع Chrome MV3 و Firefox MV2/MV3 باستخدام TypeScript و WXT Framework و Vite.
+- صممت خوارزمية تصفية ديناميكية تتعامل مع تحديات تطبيق الصفحة الواحدة (SPA) في يوتيوب عبر MutationObserver بكفاءة عالية واستهلاك ذاكرة منخفض.
+- بنيت بنية بيانات محلية (Local-First Architecture) لإدارة التصنيفات، القوائم البيضاء، والنسخ الاحتياطي (JSON Import/Export) لضمان خصوصية المستخدم 100%.
+- وفرت تجربة مستخدم متعددة اللغات (i18n) شملت أكثر من 40 لغة مع تخصيص شامل للاتجاهين (RTL/LTR) وواجهة استخدام استجابية بدون أطر عمل خارجية ثقيلة.
+
+---
+
+🔹 التحديات البرمجية والحلول الهندسية (Technical Highlights):
+- التغلب على التحديث المستمر لواجهة يوتيوب (Polymer & Custom Elements) وتفادي وميض العناصر (Flicker) أثناء تصفية المحتوى اللحظي.
+- بناء نظام تصفية متزامن مع تنقلات SPA والتمرير اللانهائي (Infinite Scroll) دون التأثير على سلاسة تصفح المستخدم (60fps performance).
+- دعم معايير Manifest V3 الجديدة والتعامل مع قيود Service Workers بكفاءة.
+
+---
+
+🔹 الكلمات المفتاحية والتقنيات (Skills & Technologies):
+TypeScript, WXT Framework, Vite, Web Extensions API (Manifest V3 / MV2), DOM Manipulation, MutationObserver, Local Storage API, i18n, Responsive CSS, Performance Optimization, Cross-browser Development.
+
+
+================================================================================
+[2] English Section (القسم الإنجليزي)
+================================================================================
+
+🔹 Short Hook / One-Liner (For Project Card):
+An open-source, privacy-first cross-browser extension that transforms YouTube into a clean, focused, and distraction-free learning environment.
+
+---
+
+🔹 Medium Summary (Elevator Pitch):
+Haris Al-Muhtawa (Content Guardian) is a modern browser extension built with TypeScript and WXT, empowering users to regain control over their YouTube feed. It introduces curated channel whitelisting, one-click channel blocking, automatic Shorts removal, and untranslated original titles—all powered by a 100% offline, local-first architecture supporting 40+ languages.
+
+---
+
+🔹 Detailed Project Overview (For Dedicated Portfolio Project Page):
+Haris Al-Muhtawa is an open-source productivity and content-curation browser extension designed to eliminate algorithmic rabbit holes on YouTube. By transforming the platform into an intentional learning workspace, users can focus exclusively on vetted, high-value creators while shielding themselves from addictive recommendation loops.
+
+Key Capabilities:
+• Vetted Whitelisting: Restricts feeds exclusively to pre-approved, safe channels.
+• Instant Channel Blocker: Permanently purges undesirable channels across home feeds and recommendations.
+• Smart Video Categorization: Allows users to group approved content into customized folders (e.g., Programming, Podcasts, Design).
+• Shorts Annihilator: Completely strips YouTube Shorts from the DOM to stop doom-scrolling.
+• Original Title Preserver: Reverts forced machine-translated video titles back to their original language.
+• Peaceful Updates Hub: Tracks updates from approved creators locally without triggering notification fatigue.
+• 100% Privacy & Zero Telemetry: Completely local-first architecture (Web Storage API); no external servers, no tracking, and no credentials required.
+• Global Accessibility: Full internationalization (i18n) supporting over 40 languages with native RTL/LTR layouts.
+
+---
+
+🔹 Resume / CV Bullet Points (Action + Impact Format):
+• Engineered a production-ready, cross-browser extension supporting Chrome (Manifest V3) and Firefox using TypeScript, WXT, and Vite.
+• Implemented high-performance DOM manipulation routines utilizing MutationObserver to filter dynamic YouTube Single Page Application (SPA) content with zero perceptible UI latency.
+• Architected a robust Local-First state management and backup system (JSON export/import) ensuring complete user data sovereignty and offline functionality.
+• Integrated an internationalization (i18n) engine with dynamic RTL/LTR support across 40+ locales, delivering a cohesive responsive UI using clean, modern CSS.
+
+---
+
+🔹 Key Technical Challenges & Solutions:
+• Dynamic SPA Interception: Engineered resilient DOM observer strategies capable of seamlessly filtering YouTube's custom Polymer Web Components (`ytd-rich-item-renderer`, `ytd-video-renderer`) without layout thrashing.
+• Manifest V3 Lifecycle Management: Adapted background tasks and alarm listeners to adhere to ephemeral Service Worker lifecycles without data loss.
+• Zero-Dependency Lightweight UI: Developed a polished, responsive popup interface using vanilla CSS tokens, eliminating bulky framework overhead.
+
+---
+
+🔹 Tech Stack & Tags:
+TypeScript | WXT Framework | Vite | Web Extensions API (MV3/MV2) | DOM & MutationObserver | Local-First Architecture | Internationalization (i18n) | Performance & SPA Optimization | Cross-Browser Compatibility
+
+================================================================================
+                                 روابط ومعلومات إضافية
+================================================================================
+• اسم المشروع: حارس المحتوى | Haris Al-Muhtawa
+• المستودع (GitHub): https://github.com/Hossam-Majrashi/haris-al-muhtawa
+• الترخيص (License): MIT License
+• المتصفحات المدعومة: Google Chrome, Brave, Microsoft Edge, Mozilla Firefox
+================================================================================
