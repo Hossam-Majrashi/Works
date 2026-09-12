@@ -47,6 +47,30 @@ const lbNext = document.getElementById('lbNext');
 const lbClose = document.getElementById('lbClose');
 const lbThumbs = document.getElementById('lbThumbs');
 
+// Fast Image Preloader & Memory Cache
+const preloadedImages = new Set();
+function preloadImage(src) {
+  if (!src || typeof src !== 'string' || preloadedImages.has(src)) return;
+  preloadedImages.add(src);
+  const img = new Image();
+  img.src = src;
+  if ('decode' in img) {
+    img.decode().catch(() => {});
+  }
+}
+
+function preloadImageList(list) {
+  if (!Array.isArray(list)) return;
+  list.forEach(item => {
+    if (typeof item === 'string') {
+      preloadImage(item);
+    } else if (item && typeof item === 'object') {
+      if (item.src) preloadImage(item.src);
+      if (item.thumb) preloadImage(item.thumb);
+    }
+  });
+}
+
 let lbGallery = [];
 let lbCurIdx = 0;
 let lbSyncCallback = null;
@@ -89,17 +113,8 @@ function updateLbSlide(idx, animate = true) {
       if (!lbVid.src.endsWith(currentItem.src)) {
         lbVid.src = currentItem.src;
       }
-      if (animate) {
-        lbVid.style.opacity = '0.25';
-        lbVid.style.transform = 'scale(0.98)';
-        setTimeout(() => {
-          lbVid.style.opacity = '1';
-          lbVid.style.transform = 'scale(1)';
-        }, 110);
-      } else {
-        lbVid.style.opacity = '1';
-        lbVid.style.transform = 'scale(1)';
-      }
+      lbVid.style.opacity = '1';
+      lbVid.style.transform = 'scale(1)';
     }
   } else {
     if (lbVid) {
@@ -107,21 +122,16 @@ function updateLbSlide(idx, animate = true) {
     }
     if (lbImg) {
       lbImg.style.display = 'block';
-      if (animate) {
-        lbImg.style.opacity = '0.25';
-        lbImg.style.transform = 'scale(0.98)';
-        setTimeout(() => {
-          lbImg.src = currentItem.src;
-          lbImg.alt = currentItem.alt || 'معاينة الصورة';
-          lbImg.style.opacity = '1';
-          lbImg.style.transform = 'scale(1)';
-        }, 110);
-      } else {
-        lbImg.src = currentItem.src;
-        lbImg.alt = currentItem.alt || 'معاينة الصورة';
-        lbImg.style.opacity = '1';
-        lbImg.style.transform = 'scale(1)';
-      }
+      lbImg.src = currentItem.src;
+      lbImg.alt = currentItem.alt || 'معاينة الصورة';
+      lbImg.style.opacity = '1';
+      lbImg.style.transform = 'scale(1)';
+      
+      // Preload next and previous images
+      const nextIdx = (lbCurIdx + 1) % lbGallery.length;
+      const prevIdx = (lbCurIdx - 1 + lbGallery.length) % lbGallery.length;
+      if (lbGallery[nextIdx] && lbGallery[nextIdx].src) preloadImage(lbGallery[nextIdx].src);
+      if (lbGallery[prevIdx] && lbGallery[prevIdx].src) preloadImage(lbGallery[prevIdx].src);
     }
   }
 
@@ -156,6 +166,9 @@ function openLightbox(items, startIndex = 0, onSync = null) {
   lbGallery = items.map(normalizeMediaItem);
   lbSyncCallback = onSync;
   lbCurIdx = Math.max(0, Math.min(startIndex, lbGallery.length - 1));
+
+  // Preload all gallery images immediately
+  preloadImageList(lbGallery);
 
   // Build thumbnail squares ("مربعات للصور والفيديو")
   if (lbThumbs) {
@@ -258,17 +271,24 @@ document.querySelectorAll('.card-slider').forEach(slider => {
   let shots = [];
   try { shots = JSON.parse(img.getAttribute('data-shots') || '[]'); } catch(e){}
   if (!shots.length) return;
+
+  // Preload all shots for this card immediately
+  preloadImageList(shots);
+
   let cur = 0;
   function update(idx) {
     if (idx < 0) idx = shots.length - 1;
     if (idx >= shots.length) idx = 0;
     cur = idx;
-    img.style.opacity = '0.25';
-    setTimeout(() => {
-      img.src = shots[cur];
-      img.style.opacity = '1';
-    }, 120);
+    img.src = shots[cur];
+    img.style.opacity = '1';
     if (counter) counter.textContent = (cur + 1) + ' / ' + shots.length;
+
+    // Preload adjacent images
+    const nextIdx = (cur + 1) % shots.length;
+    const prevIdx = (cur - 1 + shots.length) % shots.length;
+    preloadImage(shots[nextIdx]);
+    preloadImage(shots[prevIdx]);
   }
   if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); update(cur - 1); });
   if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); update(cur + 1); });
@@ -291,6 +311,9 @@ const ciscoImgs = [
   'assets/cisco/8.jpg',
   'assets/cisco/9.jpg'
 ];
+// Preload all Cisco images immediately
+preloadImageList(ciscoImgs);
+
 let ciscoIdx = 0;
 const ciscoImgEl = document.getElementById('ciscoImg');
 const ciscoCounterEl = document.getElementById('ciscoCounter');
@@ -302,16 +325,16 @@ function showCiscoSlide(idx){
   if(idx >= ciscoImgs.length) idx = 0;
   ciscoIdx = idx;
   if(ciscoImgEl){
-    ciscoImgEl.style.opacity = '0.2';
-    setTimeout(()=>{
-      ciscoImgEl.src = ciscoImgs[ciscoIdx];
-      ciscoImgEl.alt = 'سيسكو - صورة ' + (ciscoIdx + 1);
-      ciscoImgEl.style.opacity = '1';
-    }, 120);
+    ciscoImgEl.src = ciscoImgs[ciscoIdx];
+    ciscoImgEl.alt = 'سيسكو - صورة ' + (ciscoIdx + 1);
+    ciscoImgEl.style.opacity = '1';
   }
   if(ciscoCounterEl){
     ciscoCounterEl.textContent = (ciscoIdx + 1) + ' / ' + ciscoImgs.length;
   }
+  // Preload adjacent Cisco images
+  preloadImage(ciscoImgs[(ciscoIdx + 1) % ciscoImgs.length]);
+  preloadImage(ciscoImgs[(ciscoIdx - 1 + ciscoImgs.length) % ciscoImgs.length]);
 }
 
 if(ciscoPrevBtn) ciscoPrevBtn.addEventListener('click', (e)=>{ e.stopPropagation(); showCiscoSlide(ciscoIdx - 1); });
@@ -346,6 +369,8 @@ const msGallery = [
     alt: 'فيديو ابتهال أبو السعد - مايكروسوفت'
   }
 ];
+// Preload Microsoft gallery immediately
+preloadImageList(msGallery);
 
 const msImgEl = document.getElementById('msImg');
 if (msImgEl) {
@@ -403,6 +428,23 @@ function showMsSlide(idx){
 if(msPrevBtn) msPrevBtn.addEventListener('click', (e)=>{ e.stopPropagation(); showMsSlide(msIdx - 1); });
 if(msNextBtn) msNextBtn.addEventListener('click', (e)=>{ e.stopPropagation(); showMsSlide(msIdx + 1); });
 updateMsCounter();
+
+// Idle background preloader for all card images
+function preloadAllSiteImages() {
+  document.querySelectorAll('.card-slider-img').forEach(el => {
+    try {
+      const shots = JSON.parse(el.getAttribute('data-shots') || '[]');
+      preloadImageList(shots);
+    } catch(e){}
+  });
+}
+if (typeof window !== 'undefined') {
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(preloadAllSiteImages);
+  } else {
+    setTimeout(preloadAllSiteImages, 500);
+  }
+}
 
 // ===== i18n =====
 const AR = {};
